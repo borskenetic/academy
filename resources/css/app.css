@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Replaces the raw CDN <style type="text/tailwindcss"> blocks that were in
+   the original static pages (cse-courses.html / program.html). */
+.filter-tab[aria-selected='true'] {
+  @apply bg-teal text-white shadow-md;
+}
+.course-search:focus-within {
+  @apply outline outline-2 outline-gold;
+}
+
+/* Shared form input used across the auth / apply dialogs. */
+.input {
+  @apply w-full border border-line rounded-xl px-4 py-2.5 text-sm outline-none focus:border-teal;
+}
+
+/* Scroll-reveal helper (port of script.js IntersectionObserver reveal) */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}/* Seamless learning-area logo loop */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track { animation: marquee 45s linear infinite; will-change: transform; }
+.marquee:hover .marquee-track, .marquee:focus-within .marquee-track { animation-play-state: paused; }
+@media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
+/* Hide scrollbars while keeping the row scrollable (used for touch-friendly
+   horizontally scrollable category/filter rows). */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Disable scroll-reveal animation for users who prefer reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

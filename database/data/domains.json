@@ -1,0 +1,154 @@
+[
+  {
+    "name": "Gen AI Basics",
+    "sort": 0
+  },
+  {
+    "name": "AI & ML Algorithms - I",
+    "sort": 1
+  },
+  {
+    "name": "Applied ML",
+    "sort": 2
+  },
+  {
+    "name": "Blockchain Basics",
+    "sort": 3
+  },
+  {
+    "name": "Blockchain Applications - I",
+    "sort": 4
+  },
+  {
+    "name": "Blockchain Applications - II",
+    "sort": 5
+  },
+  {
+    "name": "Fintech Foundations",
+    "sort": 6
+  },
+  {
+    "name": "Fintech Risk Management",
+    "sort": 7
+  },
+  {
+    "name": "Communication",
+    "sort": 8
+  },
+  {
+    "name": "Negotiation",
+    "sort": 9
+  },
+  {
+    "name": "Business Analytics Foundations",
+    "sort": 10
+  },
+  {
+    "name": "Business Analytics Tools",
+    "sort": 11
+  },
+  {
+    "name": "Visual Analytics and Reporting",
+    "sort": 12
+  },
+  {
+    "name": "Data Science Fundamentals",
+    "sort": 13
+  },
+  {
+    "name": "Data Analysis with Python",
+    "sort": 14
+  },
+  {
+    "name": "Data Visualization with R",
+    "sort": 15
+  },
+  {
+    "name": "Data Science Applications",
+    "sort": 16
+  },
+  {
+    "name": "Design Thinking Overview",
+    "sort": 17
+  },
+  {
+    "name": "User Experience Research and Design",
+    "sort": 18
+  },
+  {
+    "name": "Graphic Design Elements for Non-Designers",
+    "sort": 19
+  },
+  {
+    "name": "Graphic Design",
+    "sort": 20
+  },
+  {
+    "name": "Video Content Development",
+    "sort": 21
+  },
+  {
+    "name": "Multimedia Content Creation",
+    "sort": 22
+  },
+  {
+    "name": "Foundations of Digital Marketing - I",
+    "sort": 23
+  },
+  {
+    "name": "Introduction to Social Media Marketing",
+    "sort": 24
+  },
+  {
+    "name": "Foundations of Digital Marketing - II",
+    "sort": 25
+  },
+  {
+    "name": "Social Media Management",
+    "sort": 26
+  },
+  {
+    "name": "Advertising and Campaign Management",
+    "sort": 27
+  },
+  {
+    "name": "Entrepreneurship Basics",
+    "sort": 28
+  },
+  {
+    "name": "Innovative Businesses",
+    "sort": 29
+  },
+  {
+    "name": "Strategic Innovation",
+    "sort": 30
+  },
+  {
+    "name": "Qualitative Research",
+    "sort": 31
+  },
+  {
+    "name": "Quantitative Research",
+    "sort": 32
+  },
+  {
+    "name": "Programming for Problem Solving",
+    "sort": 33
+  },
+  {
+    "name": "Object-Oriented Programming using C++",
+    "sort": 34
+  },
+  {
+    "name": "Java Programming",
+    "sort": 35
+  },
+  {
+    "name": "Foundations of Project Management",
+    "sort": 36
+  },
+  {
+    "name": "Fundamentals of Psychology",
+    "sort": 37
+  }
+]

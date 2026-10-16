@@ -1,0 +1,418 @@
+[
+  {
+    "title": "Security Analyst to Security Architect",
+    "category": "Cybersecurity",
+    "description": "Grow from security operations into architecture leadership.",
+    "image": "/course-images/IMG1.jpg",
+    "track_slug": null,
+    "sort": 0
+  },
+  {
+    "title": "Programmer to Secure Agile Programmer",
+    "category": "Cybersecurity",
+    "description": "Build secure coding skills within agile delivery teams.",
+    "image": "/course-images/IMG2.jpg",
+    "track_slug": null,
+    "sort": 1
+  },
+  {
+    "title": "Network Security Specialist to CloudOps Security Architect",
+    "category": "Cybersecurity",
+    "description": "Advance from network defense into cloud security architecture.",
+    "image": "/course-images/IMG3.jpg",
+    "track_slug": null,
+    "sort": 2
+  },
+  {
+    "title": "Penetration Tester to SecOps Engineer",
+    "category": "Cybersecurity",
+    "description": "Move from offensive testing into security operations.",
+    "image": "/course-images/IMG4.jpg",
+    "track_slug": null,
+    "sort": 3
+  },
+  {
+    "title": "Data Analyst to Data Scientist",
+    "category": "Data & Analytics",
+    "description": "Elevate from analysis into advanced data science.",
+    "image": "/course-images/IMG5.jpg",
+    "track_slug": null,
+    "sort": 4
+  },
+  {
+    "title": "ML Programmer to ML Architect",
+    "category": "AI",
+    "description": "Progress from building models to architecting ML systems.",
+    "image": "/course-images/IMG6.jpg",
+    "track_slug": null,
+    "sort": 5
+  },
+  {
+    "title": "AI Apprentice to AI Architect",
+    "category": "AI",
+    "description": "Develop from AI foundations into solution architecture.",
+    "image": "/course-images/IMG7.jpg",
+    "track_slug": null,
+    "sort": 6
+  },
+  {
+    "title": "Enterprise Dev to Full Stack Dev",
+    "category": "Development",
+    "description": "Broaden your skills across front and back end.",
+    "image": "/course-images/IMG8.jpg",
+    "track_slug": null,
+    "sort": 7
+  },
+  {
+    "title": "Enterprise Dev to DevOps Engineer",
+    "category": "DevOps & Cloud",
+    "description": "Transition from development into delivery automation.",
+    "image": "/course-images/IMG9.jpg",
+    "track_slug": null,
+    "sort": 8
+  },
+  {
+    "title": "Software Tester to DevOps Automated Tester",
+    "category": "Development",
+    "description": "Learn automation within modern delivery pipelines.",
+    "image": "/course-images/IMG10.jpg",
+    "track_slug": null,
+    "sort": 9
+  },
+  {
+    "title": "DevOps Engineer to CloudOps Architect",
+    "category": "DevOps & Cloud",
+    "description": "Move from operations into cloud architecture.",
+    "image": "/course-images/IMG11.jpg",
+    "track_slug": null,
+    "sort": 10
+  },
+  {
+    "title": "Software Project Analyst to Sr. Software Project Manager",
+    "category": "Business & Finance",
+    "description": "Lead larger software delivery teams effectively.",
+    "image": "/course-images/IMG12.jpg",
+    "track_slug": null,
+    "sort": 11
+  },
+  {
+    "title": "Software Project Lead to Advanced Scrum Master",
+    "category": "Business & Finance",
+    "description": "Master advanced, scaled agile facilitation.",
+    "image": "/course-images/IMG13.jpg",
+    "track_slug": null,
+    "sort": 12
+  },
+  {
+    "title": "App Developer to Blockchain Solutions Architect",
+    "category": "Development",
+    "description": "Apply blockchain to real-world application design.",
+    "image": "/course-images/IMG14.jpg",
+    "track_slug": null,
+    "sort": 13
+  },
+  {
+    "title": "Python Novice to Pythonista",
+    "category": "Development",
+    "description": "Become fluent in the Python programming language.",
+    "image": "/course-images/IMG15.jpg",
+    "track_slug": null,
+    "sort": 14
+  },
+  {
+    "title": "Web Programmer to Apprentice Programmer",
+    "category": "Development",
+    "description": "Strengthen core programming fundamentals.",
+    "image": "/course-images/IMG16.jpg",
+    "track_slug": null,
+    "sort": 15
+  },
+  {
+    "title": "Apprentice Programmer to Journeyman Developer",
+    "category": "Development",
+    "description": "Hone professional software craftsmanship.",
+    "image": "/course-images/IMG17.jpg",
+    "track_slug": null,
+    "sort": 16
+  },
+  {
+    "title": "Journeyman Developer to Master Developer",
+    "category": "Development",
+    "description": "Reach mastery in software engineering.",
+    "image": "/course-images/IMG18.jpg",
+    "track_slug": null,
+    "sort": 17
+  },
+  {
+    "title": "Leadership Development Core",
+    "category": "Leadership Development",
+    "description": "Build core leadership and people skills.",
+    "image": "/course-images/IMG19.jpg",
+    "track_slug": null,
+    "sort": 18
+  },
+  {
+    "title": "Virtual Work in the New Normal",
+    "category": "Leadership Development",
+    "description": "Lead productive, remote-first teams.",
+    "image": "/course-images/IMG20.jpg",
+    "track_slug": null,
+    "sort": 19
+  },
+  {
+    "title": "First-time Manager Journey",
+    "category": "Leadership Development",
+    "description": "Make your first confident move into management.",
+    "image": "/course-images/IMG21.jpg",
+    "track_slug": null,
+    "sort": 20
+  },
+  {
+    "title": "Mid-level Leader Journey",
+    "category": "Leadership Development",
+    "description": "Scale your impact as a growing leader.",
+    "image": "/course-images/IMG22.jpg",
+    "track_slug": null,
+    "sort": 21
+  },
+  {
+    "title": "Leader of Leaders Journey",
+    "category": "Leadership Development",
+    "description": "Lead other leaders across the organization.",
+    "image": "/course-images/IMG23.jpg",
+    "track_slug": null,
+    "sort": 22
+  },
+  {
+    "title": "Digital Mindset: Digital Visionary Mindset Journey",
+    "category": "Leadership Development",
+    "description": "Drive digital transformation with clear vision.",
+    "image": "/course-images/IMG24.jpg",
+    "track_slug": null,
+    "sort": 23
+  },
+  {
+    "title": "Innovation Mindset Journey",
+    "category": "Leadership Development",
+    "description": null,
+    "image": "/course-images/IMG1.jpg",
+    "track_slug": null,
+    "sort": 24
+  },
+  {
+    "title": "AI for Data Analytics and BI",
+    "category": "Data & Analytics",
+    "description": null,
+    "image": "/course-images/IMG2.jpg",
+    "track_slug": "ai-data-analytics-bi",
+    "sort": 25
+  },
+  {
+    "title": "AI for Data Science",
+    "category": "AI",
+    "description": null,
+    "image": "/course-images/IMG3.jpg",
+    "track_slug": "ai-data-science",
+    "sort": 26
+  },
+  {
+    "title": "AI for DevOps",
+    "category": "DevOps & Cloud",
+    "description": null,
+    "image": "/course-images/IMG4.jpg",
+    "track_slug": "ai-devops",
+    "sort": 27
+  },
+  {
+    "title": "AI for Programmers",
+    "category": "Development",
+    "description": null,
+    "image": "/course-images/IMG5.jpg",
+    "track_slug": "ai-programmers",
+    "sort": 28
+  },
+  {
+    "title": "AI for Software Engineers",
+    "category": "Development",
+    "description": null,
+    "image": "/course-images/IMG6.jpg",
+    "track_slug": "ai-software-engineers",
+    "sort": 29
+  },
+  {
+    "title": "Machine Learning",
+    "category": "AI",
+    "description": null,
+    "image": "/course-images/IMG7.jpg",
+    "track_slug": "machine-learning",
+    "sort": 30
+  },
+  {
+    "title": "Build Chatbot with Python",
+    "category": "Development",
+    "description": null,
+    "image": "/course-images/IMG8.jpg",
+    "track_slug": "build-chatbot-python",
+    "sort": 31
+  },
+  {
+    "title": "Python",
+    "category": "Development",
+    "description": null,
+    "image": "/course-images/IMG9.jpg",
+    "track_slug": "python",
+    "sort": 32
+  },
+  {
+    "title": "Data Analysis with R",
+    "category": "Data & Analytics",
+    "description": null,
+    "image": "/course-images/IMG10.jpg",
+    "track_slug": "data-analysis-r",
+    "sort": 33
+  },
+  {
+    "title": "Data Analytics Specialist",
+    "category": "Data & Analytics",
+    "description": null,
+    "image": "/course-images/IMG11.jpg",
+    "track_slug": "data-analytics-specialist",
+    "sort": 34
+  },
+  {
+    "title": "Generative AI",
+    "category": "AI",
+    "description": null,
+    "image": "/course-images/IMG12.jpg",
+    "track_slug": "generative-ai",
+    "sort": 35
+  },
+  {
+    "title": "Mastering Power BI",
+    "category": "Data & Analytics",
+    "description": null,
+    "image": "/course-images/IMG13.jpg",
+    "track_slug": "mastering-power-bi",
+    "sort": 36
+  },
+  {
+    "title": "Machine Learning Operations",
+    "category": "AI",
+    "description": null,
+    "image": "/course-images/IMG14.jpg",
+    "track_slug": "ml-operations",
+    "sort": 37
+  },
+  {
+    "title": "NLP and LLMs",
+    "category": "AI",
+    "description": null,
+    "image": "/course-images/IMG15.jpg",
+    "track_slug": "nlp-llms",
+    "sort": 38
+  },
+  {
+    "title": "No/Low Code Machine Learning",
+    "category": "AI",
+    "description": null,
+    "image": "/course-images/IMG16.jpg",
+    "track_slug": "low-code-ml",
+    "sort": 39
+  },
+  {
+    "title": "Predictive Analytics",
+    "category": "Data & Analytics",
+    "description": null,
+    "image": "/course-images/IMG17.jpg",
+    "track_slug": "predictive-analytics",
+    "sort": 40
+  },
+  {
+    "title": "Prompt Engineering for Developers",
+    "category": "AI",
+    "description": null,
+    "image": "/course-images/IMG18.jpg",
+    "track_slug": "prompt-engineering-developers",
+    "sort": 41
+  },
+  {
+    "title": "Automated Testing",
+    "category": "Development",
+    "description": null,
+    "image": "/course-images/IMG19.jpg",
+    "track_slug": "automated-testing",
+    "sort": 42
+  },
+  {
+    "title": "CyberSecurity",
+    "category": "Cybersecurity",
+    "description": null,
+    "image": "/course-images/IMG20.jpg",
+    "track_slug": "cybersecurity",
+    "sort": 43
+  },
+  {
+    "title": "VR/AR and Game Development",
+    "category": "Development",
+    "description": null,
+    "image": "/course-images/IMG21.jpg",
+    "track_slug": "vr-ar-game-development",
+    "sort": 44
+  },
+  {
+    "title": "DevOps",
+    "category": "DevOps & Cloud",
+    "description": null,
+    "image": "/course-images/IMG22.jpg",
+    "track_slug": "devops",
+    "sort": 45
+  },
+  {
+    "title": "AI Architect",
+    "category": "AI",
+    "description": null,
+    "image": "/course-images/IMG23.jpg",
+    "track_slug": "ai-architect",
+    "sort": 46
+  },
+  {
+    "title": "The Generative AI Cloud Odyssey",
+    "category": "DevOps & Cloud",
+    "description": null,
+    "image": "/course-images/IMG24.jpg",
+    "track_slug": "genai-cloud-odyssey",
+    "sort": 47
+  },
+  {
+    "title": "Design Thinking",
+    "category": "Design & Innovation",
+    "description": null,
+    "image": "/course-images/IMG1.jpg",
+    "track_slug": "design-thinking",
+    "sort": 48
+  },
+  {
+    "title": "Business Skills",
+    "category": "Business & Finance",
+    "description": null,
+    "image": "/course-images/IMG2.jpg",
+    "track_slug": "business-skills",
+    "sort": 49
+  },
+  {
+    "title": "Banking and Finance",
+    "category": "Business & Finance",
+    "description": null,
+    "image": "/course-images/IMG3.jpg",
+    "track_slug": "banking-and-finance",
+    "sort": 50
+  },
+  {
+    "title": "FinTech",
+    "category": "Business & Finance",
+    "description": null,
+    "image": "/course-images/IMG4.jpg",
+    "track_slug": "fintech",
+    "sort": 51
+  }
+]

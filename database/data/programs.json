@@ -1,0 +1,1820 @@
+[
+  {
+    "sort": 0,
+    "key": "aiml",
+    "name": "Computer Science (AI/ML)",
+    "short": "CSE (AI/ML)",
+    "tagline": "Machine learning, mobile, cloud and security electives mapped for the AI/ML stream across Year 3 and Year 4.",
+    "detail_title": "Professional Elective 3 Courses",
+    "detail_note": "Year 4 Semester 1 detail with duration, credits and course code for the AI/ML stream.",
+    "is_cse": false,
+    "featured": [
+      {
+        "title": "Software Testing and Automation",
+        "tag": "PE-2",
+        "image": null
+      },
+      {
+        "title": "Mobile Development",
+        "tag": "PE-3",
+        "image": null
+      },
+      {
+        "title": "Cloud Computing",
+        "tag": "PE-3",
+        "image": null
+      },
+      {
+        "title": "Scripting Languages",
+        "tag": "PE-3",
+        "image": null
+      },
+      {
+        "title": "Android Development with Kotlin",
+        "tag": "PE-3",
+        "image": null
+      },
+      {
+        "title": "iOS Development with Swift",
+        "tag": "PE-3",
+        "image": null
+      },
+      {
+        "title": "Cloud Security",
+        "tag": "PE-5",
+        "image": null
+      },
+      {
+        "title": "Machine Learning",
+        "tag": "AI",
+        "image": null
+      },
+      {
+        "title": "Deep Learning",
+        "tag": "AI",
+        "image": null
+      },
+      {
+        "title": "NLP & LLMs",
+        "tag": "AI",
+        "image": null
+      }
+    ],
+    "details": [
+      {
+        "title": "Mobile Development",
+        "duration": "48 hours 59 minutes",
+        "credits": "3 Credits",
+        "code": "AM734PE"
+      },
+      {
+        "title": "Cloud Computing",
+        "duration": "45 hours 18 minutes",
+        "credits": "3 Credits",
+        "code": "AM735PE"
+      },
+      {
+        "title": "Scripting Languages",
+        "duration": "53 hours 23 minutes",
+        "credits": "3 Credits",
+        "code": "AM733PE"
+      },
+      {
+        "title": "Android Development with Kotlin",
+        "duration": "56 hours 47 minutes",
+        "credits": "3 Credits",
+        "code": "AM734PE"
+      },
+      {
+        "title": "iOS Development with Swift",
+        "duration": "53 hours 23 minutes",
+        "credits": "3 Credits",
+        "code": "AM734PE"
+      }
+    ],
+    "courses": [
+      {
+        "title": "Software Testing and Automation",
+        "group_code": "PE-2",
+        "semester": "Year 3 Semester 2",
+        "duration": "54h 17m",
+        "credits": "3 Credits",
+        "code": "AM621PE"
+      },
+      {
+        "title": "Mobile Development",
+        "group_code": "PE-3",
+        "semester": "Year 4 Semester 1",
+        "duration": "48h 59m",
+        "credits": "3 Credits",
+        "code": "AM734PE"
+      },
+      {
+        "title": "Cloud Computing",
+        "group_code": "PE-3",
+        "semester": "Year 4 Semester 1",
+        "duration": "45h 18m",
+        "credits": "3 Credits",
+        "code": "AM735PE"
+      },
+      {
+        "title": "Scripting Languages",
+        "group_code": "PE-3",
+        "semester": "Year 4 Semester 1",
+        "duration": "53h 23m",
+        "credits": "3 Credits",
+        "code": "AM733PE"
+      },
+      {
+        "title": "Android Development with Kotlin",
+        "group_code": "PE-3",
+        "semester": "Year 4 Semester 1",
+        "duration": "56h 47m",
+        "credits": "3 Credits",
+        "code": "AM734PE"
+      },
+      {
+        "title": "iOS Development with Swift",
+        "group_code": "PE-3",
+        "semester": "Year 4 Semester 1",
+        "duration": "53h 23m",
+        "credits": "3 Credits",
+        "code": "AM734PE"
+      },
+      {
+        "title": "Cloud Security",
+        "group_code": "PE-5",
+        "semester": "Year 4 Semester 2",
+        "duration": "48h 50m",
+        "credits": "3 Credits",
+        "code": "AM854PE"
+      }
+    ]
+  },
+  {
+    "sort": 1,
+    "key": "ds",
+    "name": "Computer Science (Data Science)",
+    "short": "CSE (Data Science)",
+    "tagline": "AI, analytics, visualisation, mobile and cloud electives mapped for the Data Science stream.",
+    "detail_title": "Professional Elective 3 Courses",
+    "detail_note": "Year 3 Semester 2 detail with duration, credits and course code for the Data Science stream.",
+    "is_cse": false,
+    "featured": [
+      {
+        "title": "Artificial Intelligence",
+        "tag": "PE-1",
+        "image": null
+      },
+      {
+        "title": "Software Process & Project Management",
+        "tag": "PE-2",
+        "image": null
+      },
+      {
+        "title": "DevOps",
+        "tag": "PE-2",
+        "image": null
+      },
+      {
+        "title": "Mobile Development",
+        "tag": "PE-3",
+        "image": null
+      },
+      {
+        "title": "Data Storytelling and Visualisation",
+        "tag": "PE-3",
+        "image": null
+      },
+      {
+        "title": "Scripting Languages",
+        "tag": "PE-3",
+        "image": null
+      },
+      {
+        "title": "Software Testing and Automation",
+        "tag": "PE-3",
+        "image": null
+      },
+      {
+        "title": "Natural Language Processing",
+        "tag": "PE-4",
+        "image": null
+      },
+      {
+        "title": "Cloud Computing",
+        "tag": "PE-5",
+        "image": null
+      },
+      {
+        "title": "Blockchain Technology",
+        "tag": "PE-6",
+        "image": null
+      },
+      {
+        "title": "Cloud Security (Web Security)",
+        "tag": "PE-6",
+        "image": null
+      },
+      {
+        "title": "Mastering Power BI",
+        "tag": "BI",
+        "image": null
+      }
+    ],
+    "details": [
+      {
+        "title": "Mobile Development",
+        "duration": "48 hours 59 minutes",
+        "credits": "3 Credits",
+        "code": "DS634PE"
+      },
+      {
+        "title": "Data Storytelling and Visualisation",
+        "duration": "48 hours 40 minutes",
+        "credits": "3 Credits",
+        "code": "DS632PE"
+      },
+      {
+        "title": "Scripting Languages",
+        "duration": "53 hours 23 minutes",
+        "credits": "3 Credits",
+        "code": "DS633PE"
+      },
+      {
+        "title": "Android Development with Kotlin",
+        "duration": "56 hours 47 minutes",
+        "credits": "3 Credits",
+        "code": "DS634PE"
+      },
+      {
+        "title": "iOS Development with Swift",
+        "duration": "53 hours 23 minutes",
+        "credits": "3 Credits",
+        "code": "DS634PE"
+      },
+      {
+        "title": "Software Testing and Automation",
+        "duration": "54 hours 17 minutes",
+        "credits": "3 Credits",
+        "code": "DS631PE"
+      }
+    ],
+    "courses": [
+      {
+        "title": "Artificial Intelligence",
+        "group_code": "PE-1",
+        "semester": "Year 3 Semester 1",
+        "duration": "45h 14m",
+        "credits": "3 Credits",
+        "code": "DS512PE"
+      },
+      {
+        "title": "Software Process & Project Management",
+        "group_code": "PE-2",
+        "semester": "Year 3 Semester 1",
+        "duration": "49h 09m",
+        "credits": "3 Credits",
+        "code": "DS524PE"
+      },
+      {
+        "title": "DevOps",
+        "group_code": "PE-2",
+        "semester": "Year 3 Semester 1",
+        "duration": "50h 35m",
+        "credits": "3 Credits",
+        "code": "DS524PE"
+      },
+      {
+        "title": "Mobile Development",
+        "group_code": "PE-3",
+        "semester": "Year 3 Semester 2",
+        "duration": "48h 59m",
+        "credits": "3 Credits",
+        "code": "DS634PE"
+      },
+      {
+        "title": "Data Storytelling and Visualisation",
+        "group_code": "PE-3",
+        "semester": "Year 3 Semester 2",
+        "duration": "48h 40m",
+        "credits": "3 Credits",
+        "code": "DS632PE"
+      },
+      {
+        "title": "Scripting Languages",
+        "group_code": "PE-3",
+        "semester": "Year 3 Semester 2",
+        "duration": "53h 23m",
+        "credits": "3 Credits",
+        "code": "DS633PE"
+      },
+      {
+        "title": "Android Development with Kotlin",
+        "group_code": "PE-3",
+        "semester": "Year 3 Semester 2",
+        "duration": "56h 47m",
+        "credits": "3 Credits",
+        "code": "DS634PE"
+      },
+      {
+        "title": "iOS Development with Swift",
+        "group_code": "PE-3",
+        "semester": "Year 3 Semester 2",
+        "duration": "53h 23m",
+        "credits": "3 Credits",
+        "code": "DS634PE"
+      },
+      {
+        "title": "Software Testing and Automation",
+        "group_code": "PE-3",
+        "semester": "Year 3 Semester 2",
+        "duration": "54h 17m",
+        "credits": "3 Credits",
+        "code": "DS631PE"
+      },
+      {
+        "title": "Natural Language Processing",
+        "group_code": "PE-4",
+        "semester": "Year 4 Semester 1",
+        "duration": "52h 58m",
+        "credits": "3 Credits",
+        "code": "DS743PE"
+      },
+      {
+        "title": "Cloud Computing",
+        "group_code": "PE-5",
+        "semester": "Year 4 Semester 1",
+        "duration": "45h 18m",
+        "credits": "3 Credits",
+        "code": "DS752PE"
+      },
+      {
+        "title": "Blockchain Technology",
+        "group_code": "PE-6",
+        "semester": "Year 4 Semester 2",
+        "duration": "46h 00m",
+        "credits": "3 Credits",
+        "code": "DS864PE"
+      },
+      {
+        "title": "Cloud Security (Web Security)",
+        "group_code": "PE-6",
+        "semester": "Year 4 Semester 2",
+        "duration": "48h 50m",
+        "credits": "3 Credits",
+        "code": "DS862PE"
+      }
+    ]
+  },
+  {
+    "sort": 2,
+    "key": "cs",
+    "name": "Computer Science (Cyber Security)",
+    "short": "CSE (Cyber Security)",
+    "tagline": "Ethical hacking, machine learning, blockchain, mobile and cloud security electives for Cyber Security.",
+    "detail_title": "Professional Elective 3 Courses",
+    "detail_note": "Year 3 Semester 2 detail with duration, credits and course code for the Cyber Security stream.",
+    "is_cse": false,
+    "featured": [
+      {
+        "title": "Offensive Security (Ethical Hacking)",
+        "tag": "PE-2",
+        "image": null
+      },
+      {
+        "title": "Cyber Security",
+        "tag": "Security",
+        "image": null
+      },
+      {
+        "title": "Deep Learning",
+        "tag": "PE-4",
+        "image": null
+      },
+      {
+        "title": "Cloud Security",
+        "tag": "PE-6",
+        "image": null
+      },
+      {
+        "title": "Blockchain Technology",
+        "tag": "PE-3",
+        "image": null
+      },
+      {
+        "title": "DevOps",
+        "tag": "PE-3",
+        "image": null
+      },
+      {
+        "title": "Machine Learning",
+        "tag": "PE-3",
+        "image": null
+      },
+      {
+        "title": "Artificial Intelligence",
+        "tag": "PE-1",
+        "image": null
+      },
+      {
+        "title": "Cloud Computing",
+        "tag": "PE-1",
+        "image": null
+      },
+      {
+        "title": "Mobile Development",
+        "tag": "PE-3",
+        "image": null
+      }
+    ],
+    "details": [
+      {
+        "title": "DevOps",
+        "duration": "50 hours 35 minutes",
+        "credits": "3 Credits",
+        "code": "CY633PE"
+      },
+      {
+        "title": "Blockchain Technology",
+        "duration": "46 hours 00 minutes",
+        "credits": "3 Credits",
+        "code": "CY634PE"
+      },
+      {
+        "title": "Mobile Development",
+        "duration": "48 hours 59 minutes",
+        "credits": "3 Credits",
+        "code": "CY635PE"
+      },
+      {
+        "title": "Android Development with Kotlin",
+        "duration": "56 hours 47 minutes",
+        "credits": "3 Credits",
+        "code": "CY635PE"
+      },
+      {
+        "title": "iOS Development with Swift",
+        "duration": "53 hours 23 minutes",
+        "credits": "3 Credits",
+        "code": "CY635PE"
+      },
+      {
+        "title": "Machine Learning",
+        "duration": "46 hours 35 minutes",
+        "credits": "3 Credits",
+        "code": "CY632PE"
+      }
+    ],
+    "courses": [
+      {
+        "title": "Artificial Intelligence",
+        "group_code": "PE-1",
+        "semester": "Year 3 Semester 1",
+        "duration": "45h 14m",
+        "credits": "3 Credits",
+        "code": "CY512PE"
+      },
+      {
+        "title": "Cloud Computing",
+        "group_code": "PE-1",
+        "semester": "Year 3 Semester 1",
+        "duration": "45h 18m",
+        "credits": "3 Credits",
+        "code": "CY515PE"
+      },
+      {
+        "title": "Offensive Security (Ethical Hacking)",
+        "group_code": "PE-2",
+        "semester": "Year 3 Semester 1",
+        "duration": "43h 45m",
+        "credits": "3 Credits",
+        "code": "CY521PE"
+      },
+      {
+        "title": "DevOps",
+        "group_code": "PE-3",
+        "semester": "Year 3 Semester 2",
+        "duration": "50h 35m",
+        "credits": "3 Credits",
+        "code": "CY633PE"
+      },
+      {
+        "title": "Blockchain Technology",
+        "group_code": "PE-3",
+        "semester": "Year 3 Semester 2",
+        "duration": "46h 00m",
+        "credits": "3 Credits",
+        "code": "CY634PE"
+      },
+      {
+        "title": "Mobile Development",
+        "group_code": "PE-3",
+        "semester": "Year 3 Semester 2",
+        "duration": "48h 59m",
+        "credits": "3 Credits",
+        "code": "CY635PE"
+      },
+      {
+        "title": "Android Development with Kotlin",
+        "group_code": "PE-3",
+        "semester": "Year 3 Semester 2",
+        "duration": "56h 47m",
+        "credits": "3 Credits",
+        "code": "CY635PE"
+      },
+      {
+        "title": "iOS Development with Swift",
+        "group_code": "PE-3",
+        "semester": "Year 3 Semester 2",
+        "duration": "53h 23m",
+        "credits": "3 Credits",
+        "code": "CY635PE"
+      },
+      {
+        "title": "Machine Learning",
+        "group_code": "PE-3",
+        "semester": "Year 3 Semester 2",
+        "duration": "46h 35m",
+        "credits": "3 Credits",
+        "code": "CY632PE"
+      },
+      {
+        "title": "Deep Learning",
+        "group_code": "PE-4",
+        "semester": "Year 4 Semester 1",
+        "duration": "45h 16m",
+        "credits": "3 Credits",
+        "code": "CY745PE"
+      },
+      {
+        "title": "Cloud Security",
+        "group_code": "PE-6",
+        "semester": "Year 4 Semester 2",
+        "duration": "48h 50m",
+        "credits": "3 Credits",
+        "code": "CY863PE"
+      }
+    ]
+  },
+  {
+    "sort": 3,
+    "key": "it",
+    "name": "Information Technology",
+    "short": "IT",
+    "tagline": "Software, systems, mobile, AI and security electives mapped for Information Technology.",
+    "detail_title": "Professional Elective 3 Courses",
+    "detail_note": "Year 3 Semester 2 detail with duration, credits and course code for IT.",
+    "is_cse": false,
+    "featured": [
+      {
+        "title": "AI For Data Analytics and BI",
+        "tag": "PE-1",
+        "image": null
+      },
+      {
+        "title": "Data Analytics",
+        "tag": "PE-1",
+        "image": null
+      },
+      {
+        "title": "Operating Systems",
+        "tag": "PE-2",
+        "image": null
+      },
+      {
+        "title": "Full Stack Development",
+        "tag": "PE-3",
+        "image": null
+      },
+      {
+        "title": "Mobile Development",
+        "tag": "PE-3",
+        "image": null
+      },
+      {
+        "title": "Scripting Languages",
+        "tag": "PE-3",
+        "image": null
+      },
+      {
+        "title": "Software Testing and Automation",
+        "tag": "PE-3",
+        "image": null
+      },
+      {
+        "title": "Artificial Intelligence",
+        "tag": "PE-4",
+        "image": null
+      },
+      {
+        "title": "Blockchain Technology",
+        "tag": "PE-5",
+        "image": null
+      },
+      {
+        "title": "Deep Learning",
+        "tag": "PE-5",
+        "image": null
+      },
+      {
+        "title": "Natural Language Processing",
+        "tag": "PE-6",
+        "image": null
+      },
+      {
+        "title": "Cloud Security (Web Security)",
+        "tag": "PE-6",
+        "image": null
+      }
+    ],
+    "details": [
+      {
+        "title": "Mobile Development",
+        "duration": "48 hours 59 minutes",
+        "credits": "3 Credits",
+        "code": "IT634PE"
+      },
+      {
+        "title": "Scripting Languages",
+        "duration": "53 hours 23 minutes",
+        "credits": "3 Credits",
+        "code": "IT633PE"
+      },
+      {
+        "title": "Android Development with Kotlin",
+        "duration": "56 hours 47 minutes",
+        "credits": "3 Credits",
+        "code": "IT634PE"
+      },
+      {
+        "title": "iOS Development with Swift",
+        "duration": "53 hours 23 minutes",
+        "credits": "3 Credits",
+        "code": "IT634PE"
+      },
+      {
+        "title": "Full Stack Development",
+        "duration": "51 hours 01 minutes",
+        "credits": "3 Credits",
+        "code": "IT631PE"
+      },
+      {
+        "title": "Software Testing and Automation",
+        "duration": "54 hours 17 minutes",
+        "credits": "3 Credits",
+        "code": "IT635PE"
+      }
+    ],
+    "courses": [
+      {
+        "title": "AI For Data Analytics and BI",
+        "group_code": "PE-1",
+        "semester": "Year 3 Semester 1",
+        "duration": "45h 46m",
+        "credits": "3 Credits",
+        "code": "IT513PE"
+      },
+      {
+        "title": "Data Analytics",
+        "group_code": "PE-1",
+        "semester": "Year 3 Semester 1",
+        "duration": "54h 56m",
+        "credits": "3 Credits",
+        "code": "IT513PE"
+      },
+      {
+        "title": "Operating Systems",
+        "group_code": "PE-2",
+        "semester": "Year 3 Semester 1",
+        "duration": "46h 16m",
+        "credits": "3 Credits",
+        "code": "IT523PE"
+      },
+      {
+        "title": "Mobile Development",
+        "group_code": "PE-3",
+        "semester": "Year 3 Semester 2",
+        "duration": "48h 59m",
+        "credits": "3 Credits",
+        "code": "IT634PE"
+      },
+      {
+        "title": "Scripting Languages",
+        "group_code": "PE-3",
+        "semester": "Year 3 Semester 2",
+        "duration": "53h 23m",
+        "credits": "3 Credits",
+        "code": "IT633PE"
+      },
+      {
+        "title": "Android Development with Kotlin",
+        "group_code": "PE-3",
+        "semester": "Year 3 Semester 2",
+        "duration": "56h 47m",
+        "credits": "3 Credits",
+        "code": "IT634PE"
+      },
+      {
+        "title": "iOS Development with Swift",
+        "group_code": "PE-3",
+        "semester": "Year 3 Semester 2",
+        "duration": "53h 23m",
+        "credits": "3 Credits",
+        "code": "IT634PE"
+      },
+      {
+        "title": "Full Stack Development",
+        "group_code": "PE-3",
+        "semester": "Year 3 Semester 2",
+        "duration": "51h 01m",
+        "credits": "3 Credits",
+        "code": "IT631PE"
+      },
+      {
+        "title": "Software Testing and Automation",
+        "group_code": "PE-3",
+        "semester": "Year 3 Semester 2",
+        "duration": "54h 17m",
+        "credits": "3 Credits",
+        "code": "IT635PE"
+      },
+      {
+        "title": "Artificial Intelligence",
+        "group_code": "PE-4",
+        "semester": "Year 4 Semester 1",
+        "duration": "45h 14m",
+        "credits": "3 Credits",
+        "code": "IT743PE"
+      },
+      {
+        "title": "Software Process & Project Management",
+        "group_code": "PE-5",
+        "semester": "Year 4 Semester 1",
+        "duration": "49h 09m",
+        "credits": "3 Credits",
+        "code": "IT755PE"
+      },
+      {
+        "title": "Blockchain Technology",
+        "group_code": "PE-5",
+        "semester": "Year 4 Semester 1",
+        "duration": "46h 00m",
+        "credits": "3 Credits",
+        "code": "IT753PE"
+      },
+      {
+        "title": "Deep Learning",
+        "group_code": "PE-5",
+        "semester": "Year 4 Semester 1",
+        "duration": "45h 16m",
+        "credits": "3 Credits",
+        "code": "IT754PE"
+      },
+      {
+        "title": "Natural Language Processing",
+        "group_code": "PE-6",
+        "semester": "Year 4 Semester 2",
+        "duration": "52h 58m",
+        "credits": "3 Credits",
+        "code": "IT861PE"
+      },
+      {
+        "title": "Cloud Security (Web Security)",
+        "group_code": "PE-6",
+        "semester": "Year 4 Semester 2",
+        "duration": "48h 50m",
+        "credits": "3 Credits",
+        "code": "IT864PE"
+      },
+      {
+        "title": "Cyber Defense Forensics",
+        "group_code": "PE-6",
+        "semester": "Year 4 Semester 2",
+        "duration": "45h 35m",
+        "credits": "3 Credits",
+        "code": "IT865PE"
+      }
+    ]
+  },
+  {
+    "sort": 4,
+    "key": "ece",
+    "name": "Electronics and Communication",
+    "short": "ECE",
+    "tagline": "Systems, networking, AI and machine learning electives mapped for Electronics and Communication.",
+    "detail_title": "Professional Elective 1 Courses",
+    "detail_note": "Year 3 Semester 1 detail with duration, credits and course code for ECE.",
+    "is_cse": false,
+    "featured": [
+      {
+        "title": "Operating Systems",
+        "tag": "PE-1",
+        "image": null
+      },
+      {
+        "title": "Computer Networking",
+        "tag": "PE-1",
+        "image": null
+      },
+      {
+        "title": "Artificial Intelligence",
+        "tag": "PE-5",
+        "image": null
+      },
+      {
+        "title": "Machine Learning",
+        "tag": "PE-5",
+        "image": null
+      },
+      {
+        "title": "DevOps",
+        "tag": "Additional",
+        "image": null
+      },
+      {
+        "title": "Data Analysis with R",
+        "tag": "Additional",
+        "image": null
+      },
+      {
+        "title": "Python Novice to Python Apprentice",
+        "tag": "Programming",
+        "image": null
+      },
+      {
+        "title": "Cloud Computing",
+        "tag": "Cloud",
+        "image": null
+      }
+    ],
+    "details": [
+      {
+        "title": "Operating Systems",
+        "duration": "46 hours 16 minutes",
+        "credits": "3 Credits",
+        "code": "EC511PE"
+      },
+      {
+        "title": "Computer Networking",
+        "duration": "45 hours 53 minutes",
+        "credits": "3 Credits",
+        "code": "EC512PE"
+      }
+    ],
+    "courses": [
+      {
+        "title": "Operating Systems",
+        "group_code": "PE-1",
+        "semester": "Year 3 Semester 1",
+        "duration": "46h 16m",
+        "credits": "3 Credits",
+        "code": "EC511PE"
+      },
+      {
+        "title": "Computer Networking",
+        "group_code": "PE-1",
+        "semester": "Year 3 Semester 1",
+        "duration": "45h 53m",
+        "credits": "3 Credits",
+        "code": "EC512PE"
+      },
+      {
+        "title": "Artificial Intelligence",
+        "group_code": "PE-5",
+        "semester": "Year 4 Semester 2",
+        "duration": "45h 14m",
+        "credits": "3 Credits",
+        "code": "EC851PE"
+      },
+      {
+        "title": "Machine Learning",
+        "group_code": "PE-5",
+        "semester": "Year 4 Semester 2",
+        "duration": "46h 35m",
+        "credits": "3 Credits",
+        "code": "EC853PE"
+      }
+    ]
+  },
+  {
+    "sort": 5,
+    "key": "eee",
+    "name": "Electrical and Electronics",
+    "short": "EEE",
+    "tagline": "Industry-trend additional learning courses open to Electrical and Electronics students in any semester.",
+    "detail_title": "Additional Learning Courses",
+    "detail_note": "Industry-trend courses open in any semester. All carry optional-learning credit.",
+    "is_cse": false,
+    "featured": [
+      {
+        "title": "Operating Systems",
+        "tag": "Systems",
+        "image": null
+      },
+      {
+        "title": "Computer Networking",
+        "tag": "Networks",
+        "image": null
+      },
+      {
+        "title": "Artificial Intelligence",
+        "tag": "AI",
+        "image": null
+      },
+      {
+        "title": "Machine Learning",
+        "tag": "AI",
+        "image": null
+      },
+      {
+        "title": "Data Analysis with R",
+        "tag": "Data",
+        "image": null
+      },
+      {
+        "title": "DevOps",
+        "tag": "DevOps",
+        "image": null
+      },
+      {
+        "title": "Business Skills",
+        "tag": "Professional",
+        "image": null
+      },
+      {
+        "title": "Data Structures & Algorithms in Python",
+        "tag": "Programming",
+        "image": null
+      }
+    ],
+    "details": [
+      {
+        "title": "Data Analysis with R",
+        "duration": "50 hours 38 minutes",
+        "credits": "Optional Learning",
+        "code": "-"
+      },
+      {
+        "title": "Operating Systems",
+        "duration": "46 hours 16 minutes",
+        "credits": "Optional Learning",
+        "code": "-"
+      },
+      {
+        "title": "DevOps",
+        "duration": "50 hours 35 minutes",
+        "credits": "Optional Learning",
+        "code": "-"
+      },
+      {
+        "title": "Artificial Intelligence",
+        "duration": "45 hours 14 minutes",
+        "credits": "Optional Learning",
+        "code": "-"
+      },
+      {
+        "title": "Business Skills",
+        "duration": "49 hours 24 minutes",
+        "credits": "Optional Learning",
+        "code": "-"
+      },
+      {
+        "title": "Computer Networking",
+        "duration": "45 hours 53 minutes",
+        "credits": "Optional Learning",
+        "code": "-"
+      }
+    ],
+    "courses": [
+      {
+        "title": "Data Analysis with R",
+        "group_code": "Additional",
+        "semester": "Any Semester",
+        "duration": "50h 38m",
+        "credits": "Optional Learning",
+        "code": null
+      },
+      {
+        "title": "Operating Systems",
+        "group_code": "Additional",
+        "semester": "Any Semester",
+        "duration": "46h 16m",
+        "credits": "Optional Learning",
+        "code": null
+      },
+      {
+        "title": "DevOps",
+        "group_code": "Additional",
+        "semester": "Any Semester",
+        "duration": "50h 35m",
+        "credits": "Optional Learning",
+        "code": null
+      },
+      {
+        "title": "Artificial Intelligence",
+        "group_code": "Additional",
+        "semester": "Any Semester",
+        "duration": "45h 14m",
+        "credits": "Optional Learning",
+        "code": null
+      },
+      {
+        "title": "Business Skills",
+        "group_code": "Additional",
+        "semester": "Any Semester",
+        "duration": "49h 24m",
+        "credits": "Optional Learning",
+        "code": null
+      },
+      {
+        "title": "Data Storytelling and Visualisation",
+        "group_code": "Additional",
+        "semester": "Any Semester",
+        "duration": "48h 40m",
+        "credits": "Optional Learning",
+        "code": null
+      },
+      {
+        "title": "Computer Networking",
+        "group_code": "Additional",
+        "semester": "Any Semester",
+        "duration": "45h 53m",
+        "credits": "Optional Learning",
+        "code": null
+      },
+      {
+        "title": "AI for DevOps",
+        "group_code": "Additional",
+        "semester": "Any Semester",
+        "duration": "49h 01m",
+        "credits": "Optional Learning",
+        "code": null
+      },
+      {
+        "title": "Learn Developer Tools",
+        "group_code": "Additional",
+        "semester": "Any Semester",
+        "duration": "54h 38m",
+        "credits": "Optional Learning",
+        "code": null
+      },
+      {
+        "title": "AI for Software Engineers",
+        "group_code": "Additional",
+        "semester": "Any Semester",
+        "duration": "48h 33m",
+        "credits": "Optional Learning",
+        "code": null
+      },
+      {
+        "title": "Data Structures & Algorithms in Javascript",
+        "group_code": "Additional",
+        "semester": "Any Semester",
+        "duration": "48h 21m",
+        "credits": "Optional Learning",
+        "code": null
+      },
+      {
+        "title": "Data Structures & Algorithms in Python",
+        "group_code": "Additional",
+        "semester": "Any Semester",
+        "duration": "60h 10m",
+        "credits": "Optional Learning",
+        "code": null
+      }
+    ]
+  },
+  {
+    "sort": 6,
+    "key": "mech",
+    "name": "Mechanical Engineering",
+    "short": "MECH",
+    "tagline": "Industry-trend additional learning courses open to Mechanical Engineering students in any semester.",
+    "detail_title": "Additional Learning Courses",
+    "detail_note": "Industry-trend courses open in any semester. All carry optional-learning credit.",
+    "is_cse": false,
+    "featured": [
+      {
+        "title": "Learn Developer Tools",
+        "tag": "Tools",
+        "image": null
+      },
+      {
+        "title": "Data Analysis with R",
+        "tag": "Data",
+        "image": null
+      },
+      {
+        "title": "Artificial Intelligence",
+        "tag": "AI",
+        "image": null
+      },
+      {
+        "title": "Business Skills",
+        "tag": "Professional",
+        "image": null
+      },
+      {
+        "title": "DevOps",
+        "tag": "DevOps",
+        "image": null
+      },
+      {
+        "title": "Operating Systems",
+        "tag": "Systems",
+        "image": null
+      },
+      {
+        "title": "Computer Networking",
+        "tag": "Networks",
+        "image": null
+      },
+      {
+        "title": "AI for DevOps",
+        "tag": "AI",
+        "image": null
+      }
+    ],
+    "details": [
+      {
+        "title": "Learn Developer Tools",
+        "duration": "54 hours 38 minutes",
+        "credits": "Optional Learning",
+        "code": "-"
+      },
+      {
+        "title": "Data Analysis with R",
+        "duration": "50 hours 38 minutes",
+        "credits": "Optional Learning",
+        "code": "-"
+      },
+      {
+        "title": "Artificial Intelligence",
+        "duration": "45 hours 14 minutes",
+        "credits": "Optional Learning",
+        "code": "-"
+      },
+      {
+        "title": "Business Skills",
+        "duration": "49 hours 24 minutes",
+        "credits": "Optional Learning",
+        "code": "-"
+      },
+      {
+        "title": "DevOps",
+        "duration": "50 hours 35 minutes",
+        "credits": "Optional Learning",
+        "code": "-"
+      },
+      {
+        "title": "AI for DevOps",
+        "duration": "49 hours 01 minutes",
+        "credits": "Optional Learning",
+        "code": "-"
+      }
+    ],
+    "courses": [
+      {
+        "title": "Data Analysis with R",
+        "group_code": "Additional",
+        "semester": "Any Semester",
+        "duration": "50h 38m",
+        "credits": "Optional Learning",
+        "code": null
+      },
+      {
+        "title": "Operating Systems",
+        "group_code": "Additional",
+        "semester": "Any Semester",
+        "duration": "46h 16m",
+        "credits": "Optional Learning",
+        "code": null
+      },
+      {
+        "title": "DevOps",
+        "group_code": "Additional",
+        "semester": "Any Semester",
+        "duration": "50h 35m",
+        "credits": "Optional Learning",
+        "code": null
+      },
+      {
+        "title": "Artificial Intelligence",
+        "group_code": "Additional",
+        "semester": "Any Semester",
+        "duration": "45h 14m",
+        "credits": "Optional Learning",
+        "code": null
+      },
+      {
+        "title": "Business Skills",
+        "group_code": "Additional",
+        "semester": "Any Semester",
+        "duration": "49h 24m",
+        "credits": "Optional Learning",
+        "code": null
+      },
+      {
+        "title": "Data Storytelling and Visualisation",
+        "group_code": "Additional",
+        "semester": "Any Semester",
+        "duration": "48h 40m",
+        "credits": "Optional Learning",
+        "code": null
+      },
+      {
+        "title": "Computer Networking",
+        "group_code": "Additional",
+        "semester": "Any Semester",
+        "duration": "45h 53m",
+        "credits": "Optional Learning",
+        "code": null
+      },
+      {
+        "title": "AI for DevOps",
+        "group_code": "Additional",
+        "semester": "Any Semester",
+        "duration": "49h 01m",
+        "credits": "Optional Learning",
+        "code": null
+      },
+      {
+        "title": "Learn Developer Tools",
+        "group_code": "Additional",
+        "semester": "Any Semester",
+        "duration": "54h 38m",
+        "credits": "Optional Learning",
+        "code": null
+      },
+      {
+        "title": "AI for Software Engineers",
+        "group_code": "Additional",
+        "semester": "Any Semester",
+        "duration": "48h 33m",
+        "credits": "Optional Learning",
+        "code": null
+      },
+      {
+        "title": "Data Structures & Algorithms in Javascript",
+        "group_code": "Additional",
+        "semester": "Any Semester",
+        "duration": "48h 21m",
+        "credits": "Optional Learning",
+        "code": null
+      },
+      {
+        "title": "Data Structures & Algorithms in Python",
+        "group_code": "Additional",
+        "semester": "Any Semester",
+        "duration": "60h 10m",
+        "credits": "Optional Learning",
+        "code": null
+      }
+    ]
+  },
+  {
+    "sort": 7,
+    "key": "civil",
+    "name": "Civil Engineering",
+    "short": "CIVIL",
+    "tagline": "Industry-trend additional learning courses open to Civil Engineering students in any semester.",
+    "detail_title": "Additional Learning Courses",
+    "detail_note": "Industry-trend courses open in any semester. All carry optional-learning credit.",
+    "is_cse": false,
+    "featured": [
+      {
+        "title": "Data Storytelling and Visualisation",
+        "tag": "Data",
+        "image": null
+      },
+      {
+        "title": "Business Skills",
+        "tag": "Professional",
+        "image": null
+      },
+      {
+        "title": "Data Analysis with R",
+        "tag": "Data",
+        "image": null
+      },
+      {
+        "title": "Artificial Intelligence",
+        "tag": "AI",
+        "image": null
+      },
+      {
+        "title": "Learn Developer Tools",
+        "tag": "Tools",
+        "image": null
+      },
+      {
+        "title": "Operating Systems",
+        "tag": "Systems",
+        "image": null
+      },
+      {
+        "title": "Computer Networking",
+        "tag": "Networks",
+        "image": null
+      },
+      {
+        "title": "DevOps",
+        "tag": "DevOps",
+        "image": null
+      }
+    ],
+    "details": [
+      {
+        "title": "Data Storytelling and Visualisation",
+        "duration": "48 hours 40 minutes",
+        "credits": "Optional Learning",
+        "code": "-"
+      },
+      {
+        "title": "Business Skills",
+        "duration": "49 hours 24 minutes",
+        "credits": "Optional Learning",
+        "code": "-"
+      },
+      {
+        "title": "Data Analysis with R",
+        "duration": "50 hours 38 minutes",
+        "credits": "Optional Learning",
+        "code": "-"
+      },
+      {
+        "title": "Learn Developer Tools",
+        "duration": "54 hours 38 minutes",
+        "credits": "Optional Learning",
+        "code": "-"
+      },
+      {
+        "title": "Operating Systems",
+        "duration": "46 hours 16 minutes",
+        "credits": "Optional Learning",
+        "code": "-"
+      },
+      {
+        "title": "Computer Networking",
+        "duration": "45 hours 53 minutes",
+        "credits": "Optional Learning",
+        "code": "-"
+      }
+    ],
+    "courses": [
+      {
+        "title": "Data Analysis with R",
+        "group_code": "Additional",
+        "semester": "Any Semester",
+        "duration": "50h 38m",
+        "credits": "Optional Learning",
+        "code": null
+      },
+      {
+        "title": "Operating Systems",
+        "group_code": "Additional",
+        "semester": "Any Semester",
+        "duration": "46h 16m",
+        "credits": "Optional Learning",
+        "code": null
+      },
+      {
+        "title": "DevOps",
+        "group_code": "Additional",
+        "semester": "Any Semester",
+        "duration": "50h 35m",
+        "credits": "Optional Learning",
+        "code": null
+      },
+      {
+        "title": "Artificial Intelligence",
+        "group_code": "Additional",
+        "semester": "Any Semester",
+        "duration": "45h 14m",
+        "credits": "Optional Learning",
+        "code": null
+      },
+      {
+        "title": "Business Skills",
+        "group_code": "Additional",
+        "semester": "Any Semester",
+        "duration": "49h 24m",
+        "credits": "Optional Learning",
+        "code": null
+      },
+      {
+        "title": "Data Storytelling and Visualisation",
+        "group_code": "Additional",
+        "semester": "Any Semester",
+        "duration": "48h 40m",
+        "credits": "Optional Learning",
+        "code": null
+      },
+      {
+        "title": "Computer Networking",
+        "group_code": "Additional",
+        "semester": "Any Semester",
+        "duration": "45h 53m",
+        "credits": "Optional Learning",
+        "code": null
+      },
+      {
+        "title": "AI for DevOps",
+        "group_code": "Additional",
+        "semester": "Any Semester",
+        "duration": "49h 01m",
+        "credits": "Optional Learning",
+        "code": null
+      },
+      {
+        "title": "Learn Developer Tools",
+        "group_code": "Additional",
+        "semester": "Any Semester",
+        "duration": "54h 38m",
+        "credits": "Optional Learning",
+        "code": null
+      },
+      {
+        "title": "AI for Software Engineers",
+        "group_code": "Additional",
+        "semester": "Any Semester",
+        "duration": "48h 33m",
+        "credits": "Optional Learning",
+        "code": null
+      },
+      {
+        "title": "Data Structures & Algorithms in Javascript",
+        "group_code": "Additional",
+        "semester": "Any Semester",
+        "duration": "48h 21m",
+        "credits": "Optional Learning",
+        "code": null
+      },
+      {
+        "title": "Data Structures & Algorithms in Python",
+        "group_code": "Additional",
+        "semester": "Any Semester",
+        "duration": "60h 10m",
+        "credits": "Optional Learning",
+        "code": null
+      }
+    ]
+  },
+  {
+    "sort": 8,
+    "key": "cse",
+    "name": "Computer Science Engineering",
+    "short": "CSE",
+    "tagline": "AI, data, software development, cyber security, cloud, mobile and emerging technologies across Year 3 and Year 4.",
+    "detail_title": "Professional Elective 3 Courses",
+    "detail_note": "Year 3 Semester 2 detail with duration, credits and course code.",
+    "is_cse": true,
+    "featured": [
+      {
+        "title": "AI for Data Analytics & BI",
+        "tag": "Data / PE-1",
+        "image": "/course-images/IMG1.jpg"
+      },
+      {
+        "title": "AI for Data Science",
+        "tag": "Data / Analytics",
+        "image": "/course-images/IMG2.jpg"
+      },
+      {
+        "title": "AI for DevOps",
+        "tag": "DevOps / AI",
+        "image": "/course-images/IMG3.jpg"
+      },
+      {
+        "title": "AI for Programmers",
+        "tag": "AI / Coding",
+        "image": "/course-images/IMG4.jpg"
+      },
+      {
+        "title": "AI for Software Engineers",
+        "tag": "AI / Engineering",
+        "image": "/course-images/IMG5.jpg"
+      },
+      {
+        "title": "Banking and Finance",
+        "tag": "Business",
+        "image": "/course-images/IMG6.jpg"
+      },
+      {
+        "title": "Business Skills",
+        "tag": "Professional Skills",
+        "image": "/course-images/IMG7.jpg"
+      },
+      {
+        "title": "C Programming Proficiency",
+        "tag": "Programming",
+        "image": "/course-images/IMG8.jpg"
+      },
+      {
+        "title": "Cyber Security",
+        "tag": "Security / PE-4",
+        "image": "/course-images/IMG9.jpg"
+      },
+      {
+        "title": "Data Analysis with R",
+        "tag": "Data / Additional",
+        "image": "/course-images/IMG10.jpg"
+      },
+      {
+        "title": "Design Thinking",
+        "tag": "Innovation",
+        "image": "/course-images/IMG11.jpg"
+      },
+      {
+        "title": "FinTech",
+        "tag": "Business Technology",
+        "image": "/course-images/IMG12.jpg"
+      },
+      {
+        "title": "Generative AI and Prompt Engineering Essentials",
+        "tag": "GenAI / LLMs",
+        "image": "/course-images/IMG13.jpg"
+      },
+      {
+        "title": "JavaScript Novice to Professional",
+        "tag": "Web / JavaScript",
+        "image": "/course-images/IMG14.jpg"
+      },
+      {
+        "title": "Learn C#",
+        "tag": "Programming",
+        "image": "/course-images/IMG15.jpg"
+      },
+      {
+        "title": "Learn Java",
+        "tag": "Programming",
+        "image": "/course-images/IMG16.jpg"
+      },
+      {
+        "title": "Machine Learning",
+        "tag": "AI / ML",
+        "image": "/course-images/IMG17.jpg"
+      },
+      {
+        "title": "Mastering Power BI",
+        "tag": "BI / Visualization",
+        "image": "/course-images/IMG18.jpg"
+      },
+      {
+        "title": "Mobile Development with Android",
+        "tag": "Mobile / PE-3",
+        "image": "/course-images/IMG19.jpg"
+      },
+      {
+        "title": "NLP & LLMs",
+        "tag": "AI / Language",
+        "image": "/course-images/IMG20.jpg"
+      },
+      {
+        "title": "Prompt Engineering",
+        "tag": "GenAI",
+        "image": "/course-images/IMG21.jpg"
+      },
+      {
+        "title": "Python Novice to Python Apprentice",
+        "tag": "Programming",
+        "image": "/course-images/IMG22.jpg"
+      },
+      {
+        "title": "Software Testing and Software Testing Automation",
+        "tag": "QA / PE-3",
+        "image": "/course-images/IMG23.jpg"
+      },
+      {
+        "title": "Virtual Reality",
+        "tag": "Emerging Technology",
+        "image": "/course-images/IMG24.jpg"
+      }
+    ],
+    "details": [
+      {
+        "title": "Full Stack Development",
+        "duration": "51 hours 01 minutes",
+        "credits": "3 Credits",
+        "code": "CS631PE"
+      },
+      {
+        "title": "Scripting Languages",
+        "duration": "53 hours 23 minutes",
+        "credits": "3 Credits",
+        "code": "CS633PE"
+      },
+      {
+        "title": "Mobile Development",
+        "duration": "48 hours 59 minutes",
+        "credits": "3 Credits",
+        "code": "CS634PE"
+      },
+      {
+        "title": "Android Development with Kotlin",
+        "duration": "56 hours 47 minutes",
+        "credits": "3 Credits",
+        "code": "CS634PE"
+      },
+      {
+        "title": "iOS Development with Swift",
+        "duration": "53 hours 23 minutes",
+        "credits": "3 Credits",
+        "code": "CS634PE"
+      },
+      {
+        "title": "Software Testing and Automation",
+        "duration": "54 hours 17 minutes",
+        "credits": "3 Credits",
+        "code": "CS635PE"
+      }
+    ],
+    "courses": [
+      {
+        "title": "Artificial Intelligence",
+        "group_code": "PE-1",
+        "semester": "Year 3 Semester 1",
+        "duration": "45h 14m",
+        "credits": "3 Credits",
+        "code": "CS611PE"
+      },
+      {
+        "title": "AI for Data Analytics & BI",
+        "group_code": "PE-1",
+        "semester": "Year 3 Semester 1",
+        "duration": "45h 42m",
+        "credits": "3 Credits",
+        "code": "CS612PE"
+      },
+      {
+        "title": "AI for Data Science",
+        "group_code": "PE-2",
+        "semester": "Year 3 Semester 1",
+        "duration": "48h 15m",
+        "credits": "3 Credits",
+        "code": "CS621PE"
+      },
+      {
+        "title": "AI for DevOps",
+        "group_code": "PE-2",
+        "semester": "Year 3 Semester 1",
+        "duration": "49h 01m",
+        "credits": "3 Credits",
+        "code": "CS622PE"
+      },
+      {
+        "title": "Full Stack Development",
+        "group_code": "PE-3",
+        "semester": "Year 3 Semester 2",
+        "duration": "51h 01m",
+        "credits": "3 Credits",
+        "code": "CS631PE"
+      },
+      {
+        "title": "Scripting Languages",
+        "group_code": "PE-3",
+        "semester": "Year 3 Semester 2",
+        "duration": "53h 23m",
+        "credits": "3 Credits",
+        "code": "CS633PE"
+      },
+      {
+        "title": "Mobile Development",
+        "group_code": "PE-3",
+        "semester": "Year 3 Semester 2",
+        "duration": "48h 59m",
+        "credits": "3 Credits",
+        "code": "CS634PE"
+      },
+      {
+        "title": "Android Development with Kotlin",
+        "group_code": "PE-3",
+        "semester": "Year 3 Semester 2",
+        "duration": "56h 47m",
+        "credits": "3 Credits",
+        "code": "CS634PE"
+      },
+      {
+        "title": "iOS Development with Swift",
+        "group_code": "PE-3",
+        "semester": "Year 3 Semester 2",
+        "duration": "53h 23m",
+        "credits": "3 Credits",
+        "code": "CS634PE"
+      },
+      {
+        "title": "Software Testing and Automation",
+        "group_code": "PE-3",
+        "semester": "Year 3 Semester 2",
+        "duration": "54h 17m",
+        "credits": "3 Credits",
+        "code": "CS635PE"
+      },
+      {
+        "title": "Cyber Security",
+        "group_code": "PE-4",
+        "semester": "Year 4 Semester 1",
+        "duration": "52h 10m",
+        "credits": "3 Credits",
+        "code": "CS641PE"
+      },
+      {
+        "title": "Cloud Computing",
+        "group_code": "PE-4",
+        "semester": "Year 4 Semester 1",
+        "duration": "45h 18m",
+        "credits": "3 Credits",
+        "code": "CS642PE"
+      },
+      {
+        "title": "Machine Learning",
+        "group_code": "PE-5",
+        "semester": "Year 4 Semester 1",
+        "duration": "50h 20m",
+        "credits": "3 Credits",
+        "code": "CS651PE"
+      },
+      {
+        "title": "Cloud Security",
+        "group_code": "PE-5",
+        "semester": "Year 4 Semester 1",
+        "duration": "48h 50m",
+        "credits": "3 Credits",
+        "code": "CS652PE"
+      },
+      {
+        "title": "AI for Programmers",
+        "group_code": "PE-6",
+        "semester": "Year 4 Semester 2",
+        "duration": "49h 30m",
+        "credits": "3 Credits",
+        "code": "CS661PE"
+      },
+      {
+        "title": "AI for Software Engineers",
+        "group_code": "PE-6",
+        "semester": "Year 4 Semester 2",
+        "duration": "48h 33m",
+        "credits": "3 Credits",
+        "code": "CS662PE"
+      },
+      {
+        "title": "Generative AI and Prompt Engineering Essentials",
+        "group_code": "Additional",
+        "semester": "Any Semester",
+        "duration": "46h 40m",
+        "credits": "Optional Learning",
+        "code": null
+      },
+      {
+        "title": "Learn Java",
+        "group_code": "Additional",
+        "semester": "Any Semester",
+        "duration": "47h 55m",
+        "credits": "Optional Learning",
+        "code": null
+      },
+      {
+        "title": "Mastering Power BI",
+        "group_code": "Additional",
+        "semester": "Any Semester",
+        "duration": "45h 00m",
+        "credits": "Optional Learning",
+        "code": null
+      },
+      {
+        "title": "Python Novice to Python Apprentice",
+        "group_code": "Additional",
+        "semester": "Any Semester",
+        "duration": "44h 30m",
+        "credits": "Optional Learning",
+        "code": null
+      },
+      {
+        "title": "NLP & LLMs",
+        "group_code": "Additional",
+        "semester": "Any Semester",
+        "duration": "48h 12m",
+        "credits": "Optional Learning",
+        "code": null
+      },
+      {
+        "title": "Data Analysis with R",
+        "group_code": "Additional",
+        "semester": "Any Semester",
+        "duration": "50h 38m",
+        "credits": "Optional Learning",
+        "code": null
+      },
+      {
+        "title": "JavaScript Novice to Professional",
+        "group_code": "Additional",
+        "semester": "Any Semester",
+        "duration": "48h 21m",
+        "credits": "Optional Learning",
+        "code": null
+      }
+    ]
+  }
+]

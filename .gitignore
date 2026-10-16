@@ -1,0 +1,41 @@
+# dependencies
+/node_modules
+/vendor
+
+# build output
+dist
+/public/build
+/public/hot
+
+# logs
+*.log
+npm-debug.log*
+yarn-error.log
+
+# laravel
+.env
+.env.backup
+.env.production
+
+# local copies that include secrets or dependencies
+/main/
+/main.zip
+/storage/*.key
+/storage/pail
+.phpactor.json
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+auth.json
+
+# editor
+.idea
+.nova
+.fleet
+.zed
+.vscode/*
+!.vscode/extensions.json
+
+# os
+.DS_Store
+Thumbs.db

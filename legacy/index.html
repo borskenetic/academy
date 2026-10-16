@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skillsoft | JNTUH Education Foundation</title>
+    <meta
+      name="description"
+      content="JNTUH Education Foundation has partnered with Skillsoft to bring world-class digital learning content and professional development resources to students, faculty and professionals."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              navy: '#071735',
+              navyDark: '#040D1A',
+              navyLight: '#0B1E40',
+              teal: { DEFAULT: '#007D79', dark: '#00615E', light: '#36D1C4', bg: '#E6F4F3' },
+              gold: '#D4AF37',
+              ink: '#122032',
+              muted: '#536274',
+              line: '#DBE5ED',
+              soft: '#F3F8FB'
+            },
+            fontFamily: {
+              body: ['Inter','system-ui','sans-serif'],
+              heading: ['Outfit','Inter','sans-serif']
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="font-body text-ink bg-white antialiased">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-line" id="header">
+      <div class="max-w-[1200px] mx-auto px-6 py-3 flex items-center gap-4">
+        <a class="flex items-center gap-3 shrink-0" href="#" aria-label="JNTUH Education Foundation Home">
+          <div class="w-12 h-12 shrink-0">
+            <svg viewBox="0 0 100 100" class="w-12 h-12" aria-hidden="true">
+              <circle cx="50" cy="50" r="46" fill="#005B5C" stroke="#D4AF37" stroke-width="4"/>
+              <circle cx="50" cy="50" r="38" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-dasharray="3,3"/>
+              <path d="M50 18 L62 38 L84 38 L66 52 L73 74 L50 60 L27 74 L34 52 L16 38 L38 38 Z" fill="#D4AF37" opacity="0.3"/>
+              <path d="M30 46 C35 42, 45 42, 50 47 C55 42, 65 42, 70 46 L70 68 C65 64, 55 64, 50 69 C45 64, 35 64, 30 68 Z" fill="#FFFFFF"/>
+              <path d="M50 47 L50 69" stroke="#005B5C" stroke-width="2"/>
+              <circle cx="50" cy="30" r="7" fill="#E65100"/>
+            </svg>
+          </div>
+          <div class="leading-tight">
+            <span class="block font-heading font-extrabold text-navy text-lg tracking-wide">JNTUH</span>
+            <span class="block text-[0.65rem] font-bold tracking-[0.2em] text-muted">EDUCATION FOUNDATION</span>
+            <span class="block text-xs text-teal font-semibold italic">Learn. Certify. Build Your Career.</span>
+          </div>
+        </a>
+
+        <button class="lg:hidden ml-auto w-10 h-10 grid place-items-center rounded-lg border border-line" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation menu" id="menu-toggle">
+          <span class="block w-5 h-0.5 bg-navy mb-1"></span>
+          <span class="block w-5 h-0.5 bg-navy mb-1"></span>
+          <span class="block w-5 h-0.5 bg-navy"></span>
+        </button>
+
+        <nav class="hidden lg:flex items-center gap-6 ml-8 text-[0.95rem] font-semibold text-ink" id="site-nav" aria-label="Main navigation">
+          <div class="relative group">
+            <a href="#learning-areas" class="hover:text-teal py-2 inline-flex items-center gap-1">Learn <span>▾</span></a>
+            <div class="absolute left-0 top-full min-w-[220px] bg-white border border-line rounded-xl shadow-xl p-2 hidden group-hover:block">
+              <a class="block px-3 py-2 rounded-lg hover:bg-soft hover:text-teal" href="#learning-areas">All Learning Areas</a>
+              <a class="block px-3 py-2 rounded-lg hover:bg-soft hover:text-teal" href="#technology">Technology & Development</a>
+              <a class="block px-3 py-2 rounded-lg hover:bg-soft hover:text-teal" href="#data">Data & Analytics</a>
+              <a class="block px-3 py-2 rounded-lg hover:bg-soft hover:text-teal" href="#cybersecurity">Cybersecurity</a>
+              <a class="block px-3 py-2 rounded-lg hover:bg-soft hover:text-teal" href="#ai">AI & Emerging Tech</a>
+            </div>
+          </div>
+          <a href="#certifications" class="hover:text-teal">Certifications</a>
+          <a href="#audience" class="hover:text-teal">For Institutions</a>
+          <a href="#impact" class="hover:text-teal">Partners</a>
+          <a href="#about" class="hover:text-teal">About JEF</a>
+          <div class="relative group">
+            <a href="#footer" class="hover:text-teal py-2 inline-flex items-center gap-1">Support <span>▾</span></a>
+            <div class="absolute left-0 top-full min-w-[200px] bg-white border border-line rounded-xl shadow-xl p-2 hidden group-hover:block">
+              <a class="block px-3 py-2 rounded-lg hover:bg-soft hover:text-teal" href="#footer">Help Center</a>
+              <a class="block px-3 py-2 rounded-lg hover:bg-soft hover:text-teal" href="#footer">Contact Support</a>
+              <a class="block px-3 py-2 rounded-lg hover:bg-soft hover:text-teal" href="#footer">System Requirements</a>
+              <a class="block px-3 py-2 rounded-lg hover:bg-soft hover:text-teal" href="#footer">FAQs</a>
+            </div>
+          </div>
+        </nav>
+
+        <div class="hidden lg:flex items-center gap-2.5 ml-auto">
+          <button class="w-10 h-10 grid place-items-center rounded-full border border-line text-navy hover:border-teal hover:text-teal [&_svg]:w-5 [&_svg]:h-5" type="button" id="open-search-btn" aria-label="Open search dialog">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M21 21l-4.35-4.35M16.5 10.5a6 6 0 11-12 0 6 6 0 0112 0z" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </svg>
+          </button>
+          <button class="px-5 py-2.5 rounded-lg text-sm font-bold border border-teal text-teal hover:bg-teal/5" type="button" id="open-login-btn">Student Login</button>
+          <button class="px-5 py-2.5 rounded-lg text-sm font-bold bg-teal text-white hover:bg-teal-dark" type="button" id="open-register-btn">Register</button>
+        </div>
+      </div>
+      <div class="lg:hidden hidden border-t border-line bg-white px-6 py-4" id="mobile-nav">
+        <div class="grid gap-1 font-semibold">
+          <a class="px-2 py-2.5 rounded-lg hover:bg-soft" href="#learning-areas">Learn</a>
+          <a class="px-2 py-2.5 rounded-lg hover:bg-soft" href="#certifications">Certifications</a>
+          <a class="px-2 py-2.5 rounded-lg hover:bg-soft" href="#audience">For Institutions</a>
+          <a class="px-2 py-2.5 rounded-lg hover:bg-soft" href="#impact">Partners</a>
+          <a class="px-2 py-2.5 rounded-lg hover:bg-soft" href="#about">About JEF</a>
+          <a class="px-2 py-2.5 rounded-lg hover:bg-soft" href="#footer">Support</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="relative overflow-hidden bg-navy text-white" aria-labelledby="hero-title">
+        <div class="max-w-[1200px] mx-auto px-6 py-14 grid gap-10 items-center lg:grid-cols-2">
+          <div>
+            <nav class="flex items-center gap-2 text-sm text-slate-300 mb-4" aria-label="Breadcrumb">
+              <a href="#" class="hover:text-white hover:underline">Home</a>
+              <span>›</span>
+              <a href="#" class="hover:text-white hover:underline">Our Partners</a>
+              <span>›</span>
+              <span class="text-white font-semibold">Skillsoft</span>
+            </nav>
+            <p class="inline-block text-teal-light font-bold text-xs tracking-[0.15em] uppercase border border-teal-light/40 bg-teal-light/10 rounded-full px-4 py-1.5 mb-4">Our Learning Partner</p>
+            <h1 id="hero-title" class="font-heading text-white text-4xl md:text-6xl font-extrabold leading-tight mb-4">
+              Skillsoft
+              <span aria-hidden="true" class="inline-block align-middle ml-2">
+                <svg viewBox="0 0 36 36" class="w-9 h-9 inline-block"><path d="M18 0L22 14L36 18L22 22L18 36L14 22L0 18L14 14Z" fill="#36D1C4"/><circle cx="28" cy="8" r="3" fill="#36D1C4"/><circle cx="8" cy="28" r="2.5" fill="#36D1C4"/></svg>
+              </span>
+            </h1>
+            <p class="font-heading text-xl md:text-2xl text-white font-semibold leading-snug mb-3">
+              Global learning content. Industry-recognized certifications. Career-advancing skills.
+            </p>
+            <p class="text-slate-300 max-w-[36rem] mb-7">
+              JNTUH Education Foundation has partnered with Skillsoft to bring world-class digital learning content and professional development resources to students, faculty and professionals.
+            </p>
+            <div class="flex flex-wrap gap-3">
+              <a href="#learning-areas" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-bold bg-teal text-white hover:bg-teal-dark transition">
+                Explore Skillsoft Courses
+                <svg viewBox="0 0 24 24" class="w-5 h-5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-navyLight">
+              <img src="hero_laptop.png" alt="Skillsoft digital learning platform shown on laptop" class="w-full h-auto block" loading="eager">
+              <div class="pointer-events-none absolute -inset-8 bg-teal-light/20 blur-3xl"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Trust Bar (5 Cards Row) -->
+      <section class="bg-white" aria-label="Key highlights of Skillsoft partnership">
+        <div class="max-w-[1200px] mx-auto px-6 py-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+          <article class="bg-soft border border-line rounded-2xl p-5 flex gap-3.5 hover:border-teal hover:shadow-md transition">
+            <div class="w-11 h-11 shrink-0 rounded-xl bg-navy text-teal-light grid place-items-center [&_svg]:w-6 [&_svg]:h-6" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 21a9 9 0 100-18 9 9 0 000 18zM2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            </div>
+            <div>
+              <h3 class="font-heading font-bold text-navy">Global Leader</h3>
+              <p class="text-sm text-muted leading-relaxed">A global leader in digital learning and workforce development.</p>
+            </div>
+          </article>
+
+          <article class="bg-soft border border-line rounded-2xl p-5 flex gap-3.5 hover:border-teal hover:shadow-md transition">
+            <div class="w-11 h-11 shrink-0 rounded-xl bg-navy text-teal-light grid place-items-center [&_svg]:w-6 [&_svg]:h-6" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20M4 19.5A2.5 2.5 0 006.5 22H20V2H6.5A2.5 2.5 0 004 4.5v15zM12 6h4M12 10h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            </div>
+            <div>
+              <h3 class="font-heading font-bold text-navy">High-Quality Content</h3>
+              <p class="text-sm text-muted leading-relaxed">Thousands of expert-led courses across technology, business and leadership.</p>
+            </div>
+          </article>
+
+          <article class="bg-soft border border-line rounded-2xl p-5 flex gap-3.5 hover:border-teal hover:shadow-md transition">
+            <div class="w-11 h-11 shrink-0 rounded-xl bg-navy text-teal-light grid place-items-center [&_svg]:w-6 [&_svg]:h-6" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 15l-3.5 2 1-4-3-3 4-.5L12 6l1.5 3.5 4 .5-3 3 1 4z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M8.5 17.5L6 22l6-2 6 2-2.5-4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            </div>
+            <div>
+              <h3 class="font-heading font-bold text-navy">Industry Recognition</h3>
+              <p class="text-sm text-muted leading-relaxed">Certifications that are valued by employers worldwide.</p>
+            </div>
+          </article>
+
+          <article class="bg-soft border border-line rounded-2xl p-5 flex gap-3.5 hover:border-teal hover:shadow-md transition">
+            <div class="w-11 h-11 shrink-0 rounded-xl bg-navy text-teal-light grid place-items-center [&_svg]:w-6 [&_svg]:h-6" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            </div>
+            <div>
+              <h3 class="font-heading font-bold text-navy">Trusted by Millions</h3>
+              <p class="text-sm text-muted leading-relaxed">Used by organizations and learners in over 160 countries.</p>
+            </div>
+          </article>
+
+          <article class="bg-soft border border-line rounded-2xl p-5 flex gap-3.5 hover:border-teal hover:shadow-md transition">
+            <div class="w-11 h-11 shrink-0 rounded-xl bg-navy text-teal-light grid place-items-center [&_svg]:w-6 [&_svg]:h-6" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M23 6l-9.5 9.5-5-5L1 18M17 6h6v6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            </div>
+            <div>
+              <h3 class="font-heading font-bold text-navy">Career Impact</h3>
+              <p class="text-sm text-muted leading-relaxed">Learn in-demand skills and achieve your career goals faster.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Split Section: About & Benefits -->
+      <section class="bg-white" id="about" aria-labelledby="about-heading">
+        <div class="max-w-[1200px] mx-auto px-6 py-14 grid gap-10 lg:grid-cols-2 items-start">
+          <div>
+            <p class="text-teal font-extrabold tracking-widest uppercase text-xs mb-2">Partnership</p>
+            <h2 id="about-heading" class="font-heading font-bold text-navy tracking-tight text-3xl md:text-4xl mb-3">About Skillsoft</h2>
+            <div class="grid gap-4 text-muted leading-relaxed mb-6">
+              <p>
+                Skillsoft is a leading global provider of digital learning, offering a comprehensive portfolio of learning content, skills assessments and performance support resources. With a legacy of more than 25 years, Skillsoft empowers learners and organizations to build essential skills, drive performance and achieve business outcomes.
+              </p>
+              <p>
+                Through our partnership, JNTUH Education Foundation brings Skillsoft's premium learning library to students, faculty and professionals—helping them stay relevant, competitive and future-ready.
+              </p>
+            </div>
+            <a href="#learning-areas" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-bold bg-teal text-white hover:bg-teal-dark transition">
+              Explore Skillsoft Courses
+              <svg viewBox="0 0 24 24" class="w-5 h-5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            </a>
+          </div>
+
+          <div id="certifications">
+            <div class="bg-navy text-white rounded-2xl p-7 md:p-8 shadow-xl">
+              <h2 class="font-heading text-white text-xl md:text-2xl font-bold mb-5">What You Get with Skillsoft</h2>
+              <ul class="grid gap-3 text-[0.95rem] text-slate-200">
+                <li class="flex gap-3 items-start">
+                  <span class="w-6 h-6 shrink-0 rounded-full bg-teal text-white grid place-items-center text-sm font-bold" aria-hidden="true">✓</span>
+                  <span>Access to 22,000+ expert-led courses</span>
+                </li>
+                <li class="flex gap-3 items-start">
+                  <span class="w-6 h-6 shrink-0 rounded-full bg-teal text-white grid place-items-center text-sm font-bold" aria-hidden="true">✓</span>
+                  <span>Learning in multiple formats – video, audio, books, labs and practice tests</span>
+                </li>
+                <li class="flex gap-3 items-start">
+                  <span class="w-6 h-6 shrink-0 rounded-full bg-teal text-white grid place-items-center text-sm font-bold" aria-hidden="true">✓</span>
+                  <span>Hands-on labs and real-world projects</span>
+                </li>
+                <li class="flex gap-3 items-start">
+                  <span class="w-6 h-6 shrink-0 rounded-full bg-teal text-white grid place-items-center text-sm font-bold" aria-hidden="true">✓</span>
+                  <span>Role-based learning paths for career growth</span>
+                </li>
+                <li class="flex gap-3 items-start">
+                  <span class="w-6 h-6 shrink-0 rounded-full bg-teal text-white grid place-items-center text-sm font-bold" aria-hidden="true">✓</span>
+                  <span>Industry-recognized certifications</span>
+                </li>
+                <li class="flex gap-3 items-start">
+                  <span class="w-6 h-6 shrink-0 rounded-full bg-teal text-white grid place-items-center text-sm font-bold" aria-hidden="true">✓</span>
+                  <span>Personalized learning and skill assessments</span>
+                </li>
+                <li class="flex gap-3 items-start">
+                  <span class="w-6 h-6 shrink-0 rounded-full bg-teal text-white grid place-items-center text-sm font-bold" aria-hidden="true">✓</span>
+                  <span>Available anytime, anywhere on any device</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Learning Areas Section -->
+      <section class="bg-soft border-y border-line" id="learning-areas" aria-labelledby="learning-heading">
+        <div class="max-w-[1200px] mx-auto px-6 py-14">
+          <div class="text-center mb-8">
+            <p class="text-teal font-extrabold tracking-widest uppercase text-xs mb-2">Programs</p>
+            <h2 id="learning-heading" class="font-heading font-bold text-navy tracking-tight text-3xl md:text-4xl mb-2">Skillsoft Course Streams</h2>
+            <p class="text-muted max-w-[44rem] mx-auto">Every stream now opens an internal course page with electives, semester filters and apply actions.</p>
+          </div>
+
+          <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <a href="cse-courses.html" class="group bg-white border border-line rounded-2xl p-6 flex flex-col gap-2.5 hover:border-teal hover:shadow-lg transition" data-category="Computer Science">
+              <div class="w-12 h-12 rounded-xl bg-teal-bg text-teal grid place-items-center [&_svg]:w-6 [&_svg]:h-6" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M7 8l3 3-3 3M13 14h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </div>
+              <span class="font-heading font-bold text-navy">Computer Science Engineering</span>
+              <span class="text-sm text-muted leading-relaxed">View CSE professional electives, semester filters and additional learning subjects.</span>
+              <span class="text-sm font-bold text-teal group-hover:underline">View CSE Courses →</span>
+            </a>
+
+            <a href="program.html?p=aiml" class="group bg-white border border-line rounded-2xl p-6 flex flex-col gap-2.5 hover:border-teal hover:shadow-lg transition" data-category="Computer Science AI ML">
+              <div class="w-12 h-12 rounded-xl bg-teal-bg text-teal grid place-items-center [&_svg]:w-6 [&_svg]:h-6" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+              </div>
+              <span class="font-heading font-bold text-navy">Computer Science (AI/ML)</span>
+              <span class="text-sm text-muted leading-relaxed">View AI/ML electives: testing, mobile, cloud, scripting and cloud security.</span>
+              <span class="text-sm font-bold text-teal group-hover:underline">View Courses →</span>
+            </a>
+
+            <a href="program.html?p=ds" class="group bg-white border border-line rounded-2xl p-6 flex flex-col gap-2.5 hover:border-teal hover:shadow-lg transition" data-category="Computer Science Data Science">
+              <div class="w-12 h-12 rounded-xl bg-teal-bg text-teal grid place-items-center [&_svg]:w-6 [&_svg]:h-6" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+              </div>
+              <span class="font-heading font-bold text-navy">Computer Science (Data Science)</span>
+              <span class="text-sm text-muted leading-relaxed">View Data Science electives: AI, DevOps, visualisation, NLP, cloud and blockchain.</span>
+              <span class="text-sm font-bold text-teal group-hover:underline">View Courses →</span>
+            </a>
+
+            <a href="program.html?p=cs" class="group bg-white border border-line rounded-2xl p-6 flex flex-col gap-2.5 hover:border-teal hover:shadow-lg transition" data-category="Computer Science CyberSecurity">
+              <div class="w-12 h-12 rounded-xl bg-teal-bg text-teal grid place-items-center [&_svg]:w-6 [&_svg]:h-6" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z" stroke="currentColor" stroke-width="1.8" fill="none"/></svg>
+              </div>
+              <span class="font-heading font-bold text-navy">Computer Science (CyberSecurity)</span>
+              <span class="text-sm text-muted leading-relaxed">View Cyber Security electives: ethical hacking, ML, blockchain and cloud security.</span>
+              <span class="text-sm font-bold text-teal group-hover:underline">View Courses →</span>
+            </a>
+
+            <a href="program.html?p=it" class="group bg-white border border-line rounded-2xl p-6 flex flex-col gap-2.5 hover:border-teal hover:shadow-lg transition" data-category="Information Technology">
+              <div class="w-12 h-12 rounded-xl bg-teal-bg text-teal grid place-items-center [&_svg]:w-6 [&_svg]:h-6" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM22 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="1.8" fill="none"/></svg>
+              </div>
+              <span class="font-heading font-bold text-navy">Information Technology</span>
+              <span class="text-sm text-muted leading-relaxed">View IT electives: analytics, operating systems, full stack, AI and security.</span>
+              <span class="text-sm font-bold text-teal group-hover:underline">View Courses →</span>
+            </a>
+
+            <a href="program.html?p=ece" class="group bg-white border border-line rounded-2xl p-6 flex flex-col gap-2.5 hover:border-teal hover:shadow-lg transition" data-category="Electronics Communication">
+              <div class="w-12 h-12 rounded-xl bg-teal-bg text-teal grid place-items-center [&_svg]:w-6 [&_svg]:h-6" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2" stroke="currentColor" stroke-width="1.8" fill="none"/></svg>
+              </div>
+              <span class="font-heading font-bold text-navy">Electronics and Communication</span>
+              <span class="text-sm text-muted leading-relaxed">View ECE electives: operating systems, networking, AI and machine learning.</span>
+              <span class="text-sm font-bold text-teal group-hover:underline">View Courses →</span>
+            </a>
+
+            <a href="program.html?p=eee" class="group bg-white border border-line rounded-2xl p-6 flex flex-col gap-2.5 hover:border-teal hover:shadow-lg transition" data-category="Electronics Electrical">
+              <div class="w-12 h-12 rounded-xl bg-teal-bg text-teal grid place-items-center [&_svg]:w-6 [&_svg]:h-6" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1zM4 22v-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg>
+              </div>
+              <span class="font-heading font-bold text-navy">Electronics and Electrical</span>
+              <span class="text-sm text-muted leading-relaxed">View EEE additional learning: systems, networks, AI, data and business skills.</span>
+              <span class="text-sm font-bold text-teal group-hover:underline">View Courses →</span>
+            </a>
+
+            <a href="program.html?p=mech" class="group bg-white border border-line rounded-2xl p-6 flex flex-col gap-2.5 hover:border-teal hover:shadow-lg transition" data-category="Mechanical Engineering">
+              <div class="w-12 h-12 rounded-xl bg-teal-bg text-teal grid place-items-center [&_svg]:w-6 [&_svg]:h-6" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="9" y="9" width="6" height="6" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </div>
+              <span class="font-heading font-bold text-navy">Mechanical Engineering</span>
+              <span class="text-sm text-muted leading-relaxed">View Mechanical additional learning: tools, data, AI and DevOps skills.</span>
+              <span class="text-sm font-bold text-teal group-hover:underline">View Courses →</span>
+            </a>
+
+            <a href="program.html?p=civil" class="group bg-white border border-line rounded-2xl p-6 flex flex-col gap-2.5 hover:border-teal hover:shadow-lg transition" data-category="Civil Engineering">
+              <div class="w-12 h-12 rounded-xl bg-teal-bg text-teal grid place-items-center [&_svg]:w-6 [&_svg]:h-6" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-4 7 4v12M8 12h2M14 12h2M8 16h2M14 16h2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+              </div>
+              <span class="font-heading font-bold text-navy">Civil Engineering</span>
+              <span class="text-sm text-muted leading-relaxed">View Civil additional learning: storytelling, data, tools and business skills.</span>
+              <span class="text-sm font-bold text-teal group-hover:underline">View Courses →</span>
+            </a>
+          </div>
+
+          <div class="text-center mt-8">
+            <a href="index.html#learning-areas" class="inline-flex items-center gap-2 font-bold text-teal hover:underline">
+              View All Programs On This Site
+              <svg viewBox="0 0 24 24" class="w-5 h-5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Audience & Impact Section -->
+      <section class="bg-white border-t border-line" aria-label="Audience benefits and partner impact">
+        <div class="max-w-[1200px] mx-auto px-6 py-14 grid gap-10 lg:grid-cols-2 items-start">
+          <div id="audience">
+            <p class="text-teal font-extrabold tracking-widest uppercase text-xs mb-2">Audience</p>
+            <h2 class="font-heading font-bold text-navy tracking-tight text-3xl md:text-4xl mb-3">Who Can Benefit?</h2>
+            <div class="grid gap-4 sm:grid-cols-2">
+              <article class="bg-soft border border-line rounded-2xl p-5 flex gap-3.5">
+                <div class="w-11 h-11 shrink-0 rounded-xl bg-teal-bg text-teal grid place-items-center [&_svg]:w-6 [&_svg]:h-6" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M6 12v5c3 3 9 3 12 0v-5" stroke="currentColor" stroke-width="1.8" fill="none"/></svg>
+                </div>
+                <div>
+                  <h3 class="font-heading font-bold text-navy">Students</h3>
+                  <p class="text-sm text-muted">Build industry-relevant skills and earn certifications.</p>
+                </div>
+              </article>
+
+              <article class="bg-soft border border-line rounded-2xl p-5 flex gap-3.5">
+                <div class="w-11 h-11 shrink-0 rounded-xl bg-teal-bg text-teal grid place-items-center [&_svg]:w-6 [&_svg]:h-6" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M12 14v7M17 11.5v5.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                </div>
+                <div>
+                  <h3 class="font-heading font-bold text-navy">Faculty</h3>
+                  <p class="text-sm text-muted">Enhance teaching and stay updated with new skills.</p>
+                </div>
+              </article>
+
+              <article class="bg-soft border border-line rounded-2xl p-5 flex gap-3.5">
+                <div class="w-11 h-11 shrink-0 rounded-xl bg-teal-bg text-teal grid place-items-center [&_svg]:w-6 [&_svg]:h-6" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2" stroke="currentColor" stroke-width="1.8" fill="none"/></svg>
+                </div>
+                <div>
+                  <h3 class="font-heading font-bold text-navy">Professionals</h3>
+                  <p class="text-sm text-muted">Upskill or reskill to advance your career.</p>
+                </div>
+              </article>
+
+              <article class="bg-soft border border-line rounded-2xl p-5 flex gap-3.5">
+                <div class="w-11 h-11 shrink-0 rounded-xl bg-teal-bg text-teal grid place-items-center [&_svg]:w-6 [&_svg]:h-6" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M8 10v11M12 10v11M16 10v11M20 10v11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg>
+                </div>
+                <div>
+                  <h3 class="font-heading font-bold text-navy">Institutions</h3>
+                  <p class="text-sm text-muted">Strengthen learning outcomes and employability.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div id="impact">
+            <div class="bg-navy text-white rounded-2xl p-7 md:p-8 shadow-xl">
+              <h2 class="font-heading text-white text-xl md:text-2xl font-bold">Our Impact Together</h2>
+
+              <div class="grid grid-cols-2 gap-4 mt-5">
+                <div class="bg-white/5 border border-white/10 rounded-xl p-4 text-center">
+                  <span class="stat-number font-heading font-extrabold text-2xl text-teal-light block">30,000+</span>
+                  <span class="text-xs text-slate-300">Learners Empowered</span>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-xl p-4 text-center">
+                  <span class="stat-number font-heading font-extrabold text-2xl text-teal-light block">550+</span>
+                  <span class="text-xs text-slate-300">Courses Available</span>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-xl p-4 text-center">
+                  <span class="stat-number font-heading font-extrabold text-2xl text-teal-light block">15,000+</span>
+                  <span class="text-xs text-slate-300">Certifications Earned</span>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-xl p-4 text-center">
+                  <span class="stat-number font-heading font-extrabold text-2xl text-teal-light block">150+</span>
+                  <span class="text-xs text-slate-300">Academic Partners</span>
+                </div>
+              </div>
+
+              <div class="mt-6 bg-white/5 border border-white/10 rounded-xl p-5">
+                <blockquote aria-live="polite">
+                  <p data-testimonial-text class="text-slate-200 leading-relaxed">“ Skillsoft's content has helped me gain practical skills and confidence to apply my knowledge in real-world situations. ”</p>
+                  <cite data-testimonial-author class="block mt-2 text-sm text-teal-light not-italic font-semibold">- JNTUH Learner</cite>
+                </blockquote>
+
+                <div class="flex gap-2 mt-4" aria-label="Testimonial pagination">
+                  <button type="button" class="dot is-active w-2.5 h-2.5 rounded-full bg-teal-light" data-testimonial="0" aria-label="Testimonial 1"></button>
+                  <button type="button" class="dot w-2.5 h-2.5 rounded-full bg-white/30" data-testimonial="1" aria-label="Testimonial 2"></button>
+                  <button type="button" class="dot w-2.5 h-2.5 rounded-full bg-white/30" data-testimonial="2" aria-label="Testimonial 3"></button>
+                  <button type="button" class="dot w-2.5 h-2.5 rounded-full bg-white/30" data-testimonial="3" aria-label="Testimonial 4"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Empowering Banner CTA -->
+      <section class="bg-gradient-to-br from-teal to-navy" aria-labelledby="cta-title">
+        <div class="max-w-[1200px] mx-auto px-6 py-12 grid gap-6 items-center text-center lg:grid-cols-[auto_1fr_auto] lg:text-left">
+          <div aria-hidden="true" class="hidden lg:block">
+            <svg viewBox="0 0 100 100" class="w-20 h-20">
+              <rect x="15" y="25" width="70" height="50" rx="6" fill="#007D79" opacity="0.15"/>
+              <rect x="22" y="32" width="56" height="36" rx="4" fill="#007D79" opacity="0.25"/>
+              <path d="M50 15 L70 30 L70 55 C70 70 50 82 50 82 C50 82 30 70 30 55 L30 30 Z" fill="#007D79" stroke="#FFFFFF" stroke-width="2"/>
+              <path d="M42 48 L48 54 L58 42" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </svg>
+          </div>
+          <div>
+            <h2 id="cta-title" class="font-heading text-white text-2xl md:text-3xl font-bold">Empowering Future-Ready Learners</h2>
+            <p class="text-teal-bg/90 mt-2 max-w-[40rem] mx-auto lg:mx-0">
+              Together with Skillsoft, JNTUH Education Foundation is committed to delivering high-quality learning experiences that prepare learners for tomorrow's opportunities.
+            </p>
+          </div>
+          <div>
+            <a href="#learning-areas" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-bold bg-gold text-navy hover:bg-yellow-500 transition">
+              Start Learning with Skillsoft
+              <svg viewBox="0 0 24 24" class="w-5 h-5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-navyDark text-slate-300" id="footer">
+      <div class="border-b border-white/10">
+        <div class="max-w-[1200px] mx-auto px-6 py-12 grid gap-10 lg:grid-cols-[1.2fr_2fr_1fr]">
+          <div>
+            <a class="flex items-center gap-3" href="#" aria-label="JNTUH Education Foundation Home">
+              <div class="w-11 h-11 shrink-0">
+                <svg viewBox="0 0 100 100" class="w-11 h-11" aria-hidden="true">
+                  <circle cx="50" cy="50" r="46" fill="#005B5C" stroke="#D4AF37" stroke-width="4"/>
+                  <circle cx="50" cy="50" r="38" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-dasharray="3,3"/>
+                  <path d="M30 46 C35 42, 45 42, 50 47 C55 42, 65 42, 70 46 L70 68 C65 64, 55 64, 50 69 C45 64, 35 64, 30 68 Z" fill="#FFFFFF"/>
+                </svg>
+              </div>
+              <div class="leading-tight">
+                <span class="block font-heading font-bold text-white text-sm tracking-wide">JNTUH EDUCATION FOUNDATION</span>
+                <span class="block text-xs text-slate-400">An Initiative of JNTU Hyderabad</span>
+              </div>
+            </a>
+            <div class="flex gap-2.5 mt-5" id="social-links">
+              <a href="#" aria-label="Facebook" class="w-9 h-9 grid place-items-center rounded-full bg-white/10 hover:bg-teal hover:text-white [&_svg]:w-4 [&_svg]:h-4">FB</a>
+              <a href="#" aria-label="X / Twitter" class="w-9 h-9 grid place-items-center rounded-full bg-white/10 hover:bg-teal hover:text-white text-xs font-bold">X</a>
+              <a href="#" aria-label="LinkedIn" class="w-9 h-9 grid place-items-center rounded-full bg-white/10 hover:bg-teal hover:text-white text-xs font-bold">in</a>
+              <a href="#" aria-label="YouTube" class="w-9 h-9 grid place-items-center rounded-full bg-white/10 hover:bg-teal hover:text-white [&_svg]:w-4 [&_svg]:h-4">YT</a>
+            </div>
+          </div>
+
+          <div class="grid gap-8 grid-cols-2 sm:grid-cols-3" id="footer-links">
+            <div>
+              <h4 class="font-heading font-bold text-white text-sm tracking-wide mb-3">Learn</h4>
+              <ul class="grid gap-2 text-sm">
+                <li><a class="hover:text-teal-light" href="#learning-areas">All Courses</a></li>
+                <li><a class="hover:text-teal-light" href="#learning-areas">Learning Paths</a></li>
+                <li><a class="hover:text-teal-light" href="#learning-areas">New Courses</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-heading font-bold text-white text-sm tracking-wide mb-3">Certifications</h4>
+              <ul class="grid gap-2 text-sm">
+                <li><a class="hover:text-teal-light" href="#certifications">Skillsoft Certs</a></li>
+                <li><a class="hover:text-teal-light" href="#certifications">Exam Info</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-heading font-bold text-white text-sm tracking-wide mb-3">Support</h4>
+              <ul class="grid gap-2 text-sm">
+                <li><a class="hover:text-teal-light" href="#footer">Help Center</a></li>
+                <li><a class="hover:text-teal-light" href="#footer">Contact Us</a></li>
+                <li><a class="hover:text-teal-light" href="#footer">FAQ</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div id="footer-newsletter">
+            <h4 class="font-heading font-bold text-white text-sm tracking-wide mb-3">Stay Connected</h4>
+            <p class="text-sm text-slate-400 mb-3">Subscribe for updates and new courses.</p>
+            <form id="newsletter-form" novalidate>
+              <div class="flex items-center gap-2 bg-white/10 border border-white/15 rounded-xl p-1.5 pl-4">
+                <input type="email" id="newsletter-email" placeholder="Enter your email" required aria-label="Enter your email for newsletter" class="flex-1 min-w-0 bg-transparent outline-none text-sm text-white placeholder:text-slate-500">
+                <button type="submit" aria-label="Subscribe" class="w-10 h-10 shrink-0 grid place-items-center rounded-lg bg-teal text-white hover:bg-teal-dark">→</button>
+              </div>
+              <p class="text-xs mt-2" id="newsletter-feedback" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="max-w-[1200px] mx-auto px-6 py-5 flex flex-col md:flex-row items-center gap-3 md:justify-between text-xs text-slate-400">
+          <p>© 2025 JNTUH Education Foundation. All Rights Reserved.</p>
+          <div class="flex items-center gap-3">
+            <a class="hover:text-teal-light" href="#">Privacy Policy</a>
+            <span>|</span>
+            <a class="hover:text-teal-light" href="#">Terms of Use</a>
+            <span>|</span>
+            <a class="hover:text-teal-light" href="#">Security</a>
+          </div>
+          <div class="inline-flex items-center gap-1.5 font-semibold text-teal-light">
+            <span>✓</span>
+            <span>Trusted &amp; Secure</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Search Dialog Modal -->
+    <dialog class="p-0 rounded-2xl w-[min(94vw,560px)] backdrop:bg-navy/60" id="search-dialog" aria-labelledby="search-dialog-title">
+      <div class="p-6">
+        <div class="flex items-start justify-between gap-4 mb-4">
+          <h2 id="search-dialog-title" class="font-heading font-bold text-navy text-lg">Search Skillsoft Courses &amp; Certifications</h2>
+          <button class="w-9 h-9 grid place-items-center rounded-full bg-soft hover:bg-line text-xl leading-none" id="close-search-btn" type="button" aria-label="Close dialog">&times;</button>
+        </div>
+        <form id="search-form">
+          <div class="flex items-center gap-2 border border-line rounded-xl p-2 pl-3">
+            <svg viewBox="0 0 24 24" class="w-5 h-5 text-muted shrink-0"><path d="M21 21l-4.35-4.35M16.5 10.5a6 6 0 11-12 0 6 6 0 0112 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            <input type="text" id="search-input" placeholder="e.g. Cybersecurity, AWS, Python..." autocomplete="off" class="flex-1 min-w-0 outline-none text-sm">
+            <button type="submit" class="px-4 py-2 rounded-lg text-sm font-bold bg-teal text-white hover:bg-teal-dark">Search</button>
+          </div>
+          <div class="flex flex-wrap items-center gap-2 mt-3 text-sm">
+            <span class="text-muted">Popular Searches:</span>
+            <button type="button" class="px-3 py-1.5 rounded-full border border-line text-xs font-bold hover:border-teal hover:text-teal" data-search-term="Python">Python</button>
+            <button type="button" class="px-3 py-1.5 rounded-full border border-line text-xs font-bold hover:border-teal hover:text-teal" data-search-term="Cloud Computing">Cloud Computing</button>
+            <button type="button" class="px-3 py-1.5 rounded-full border border-line text-xs font-bold hover:border-teal hover:text-teal" data-search-term="Cybersecurity">Cybersecurity</button>
+            <button type="button" class="px-3 py-1.5 rounded-full border border-line text-xs font-bold hover:border-teal hover:text-teal" data-search-term="AI & Machine Learning">AI &amp; Machine Learning</button>
+          </div>
+          <div class="grid gap-2 mt-4 text-sm" id="search-results"></div>
+        </form>
+      </div>
+    </dialog>
+
+    <!-- Student Login Modal -->
+    <dialog class="p-0 rounded-2xl w-[min(94vw,440px)] backdrop:bg-navy/60" id="login-dialog" aria-labelledby="login-dialog-title">
+      <div class="p-6">
+        <div class="flex items-start justify-between gap-4 mb-4">
+          <h2 id="login-dialog-title" class="font-heading font-bold text-navy text-lg">Student Portal Login</h2>
+          <button class="w-9 h-9 grid place-items-center rounded-full bg-soft hover:bg-line text-xl leading-none" id="close-login-btn" type="button" aria-label="Close dialog">&times;</button>
+        </div>
+        <form id="login-form" class="grid gap-3.5">
+          <p class="text-sm text-muted">Access your Skillsoft courses through JNTUH Education Foundation portal.</p>
+          <div class="grid gap-1.5">
+            <label class="text-sm font-bold text-navy" for="login-email">Student Roll No. or Email</label>
+            <input class="border border-line rounded-xl px-4 py-2.5 text-sm outline-none focus:border-teal" type="text" id="login-email" required placeholder="e.g. 21031A0501@jntuh.ac.in">
+          </div>
+          <div class="grid gap-1.5">
+            <label class="text-sm font-bold text-navy" for="login-password">Password</label>
+            <input class="border border-line rounded-xl px-4 py-2.5 text-sm outline-none focus:border-teal" type="password" id="login-password" required placeholder="••••••••">
+          </div>
+          <div class="flex items-center justify-between text-sm">
+            <label class="inline-flex items-center gap-2 text-muted"><input type="checkbox" class="accent-teal-700"> Remember me</label>
+            <a href="#" class="font-bold text-teal hover:underline">Forgot password?</a>
+          </div>
+          <button type="submit" class="w-full px-5 py-3 rounded-xl text-sm font-bold bg-teal text-white hover:bg-teal-dark">Login to Student Dashboard</button>
+        </form>
+      </div>
+    </dialog>
+
+    <!-- Register Modal -->
+    <dialog class="p-0 rounded-2xl w-[min(94vw,440px)] backdrop:bg-navy/60" id="register-dialog" aria-labelledby="register-dialog-title">
+      <div class="p-6">
+        <div class="flex items-start justify-between gap-4 mb-4">
+          <h2 id="register-dialog-title" class="font-heading font-bold text-navy text-lg">Register for Skillsoft Access</h2>
+          <button class="w-9 h-9 grid place-items-center rounded-full bg-soft hover:bg-line text-xl leading-none" id="close-register-btn" type="button" aria-label="Close dialog">&times;</button>
+        </div>
+        <form id="register-form" class="grid gap-3.5">
+          <p class="text-sm text-muted">Create your learner account to access 22,000+ courses and certifications.</p>
+          <div class="grid gap-1.5">
+            <label class="text-sm font-bold text-navy" for="reg-name">Full Name</label>
+            <input class="border border-line rounded-xl px-4 py-2.5 text-sm outline-none focus:border-teal" type="text" id="reg-name" required placeholder="Enter your full name">
+          </div>
+          <div class="grid gap-1.5">
+            <label class="text-sm font-bold text-navy" for="reg-email">Institutional or Personal Email</label>
+            <input class="border border-line rounded-xl px-4 py-2.5 text-sm outline-none focus:border-teal" type="email" id="reg-email" required placeholder="name@example.com">
+          </div>
+          <div class="grid gap-1.5">
+            <label class="text-sm font-bold text-navy" for="reg-role">I am a</label>
+            <select id="reg-role" required class="border border-line rounded-xl px-4 py-2.5 text-sm outline-none focus:border-teal bg-white">
+              <option value="student">Student</option>
+              <option value="faculty">Faculty Member</option>
+              <option value="professional">Working Professional</option>
+              <option value="institution">Institutional Administrator</option>
+            </select>
+          </div>
+          <button type="submit" class="w-full px-5 py-3 rounded-xl text-sm font-bold bg-teal text-white hover:bg-teal-dark">Submit Registration</button>
+        </form>
+      </div>
+    </dialog>
+
+    <!-- Toast Notification Box -->
+    <div class="fixed bottom-8 right-8 z-[2000] flex flex-col gap-3 pointer-events-none" id="toast-container" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
