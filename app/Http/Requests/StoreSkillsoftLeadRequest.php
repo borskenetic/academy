@@ -2,18 +2,10 @@
 
 namespace App\Http\Requests;
 
-use Closure;
 use Illuminate\Foundation\Http\FormRequest;
 
 class StoreSkillsoftLeadRequest extends FormRequest
 {
-    private const INSTITUTION_EMAIL_DOMAINS = [
-        'ndmc' => 'ndmc.edu.ph',
-        'earist' => 'earist.edu.ph',
-        'zppsu' => 'zppsu.edu.ph',
-        'jmc' => 'jmc.edu.ph',
-    ];
-
     public function authorize(): bool
     {
         return true;
@@ -44,30 +36,16 @@ class StoreSkillsoftLeadRequest extends FormRequest
             'first_name' => ['required', 'string', 'max:100'],
             'last_name' => ['required', 'string', 'max:100'],
             'name' => ['required', 'string', 'max:255'],
-            'email' => [
-                'required',
-                'string',
-                'email',
-                'max:255',
-                function (string $attribute, mixed $value, Closure $fail): void {
-                    $institution = strtolower((string) $this->input('institution'));
-                    $domain = self::INSTITUTION_EMAIL_DOMAINS[$institution] ?? null;
-
-                    if ($domain !== null && ! str_ends_with(strtolower((string) $value), '@'.$domain)) {
-                        $fail("The email must be an official @{$domain} address.");
-                    }
-                },
-            ],
+            'email' => ['required', 'string', 'email', 'max:255'],
             'mobile_number' => ['required', 'string', 'max:30'],
             'course_title' => ['required', 'string', 'max:255'],
             'gender' => ['nullable', 'string', 'max:32'],
             'applicant_category' => ['nullable', 'string', 'max:64'],
             'education_level' => ['nullable', 'string', 'max:64'],
             'address' => ['nullable', 'string', 'max:1000'],
-            'pincode' => ['nullable', 'string', 'max:20'],
             'college_name' => ['nullable', 'string', 'max:255'],
-            'eligibility_prn' => ['nullable', 'string', 'max:100'],
             'roll_no' => ['nullable', 'string', 'max:100'],
+            'course_program' => ['nullable', 'string', 'max:255'],
             'year_of_study' => ['nullable', 'string', 'max:50'],
             'course_slug' => ['nullable', 'string', 'max:255'],
             'course_url' => ['nullable', 'url', 'max:2048'],

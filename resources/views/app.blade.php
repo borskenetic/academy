@@ -15,6 +15,7 @@
   </head>
   <body>
     @inertia
+    @viteReactRefresh
     @vite('resources/js/main.jsx')
   </body>
 </html>

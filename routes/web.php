@@ -43,4 +43,5 @@ Route::post('/applications', [ApplicationController::class, 'store'])
 
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', DashboardController::class)->name('dashboard');
+    Route::get('/dashboard/export', [DashboardController::class, 'export'])->name('dashboard.export');
 });

@@ -23,6 +23,8 @@ class SkillsoftLeadApiTest extends TestCase
             'mobile_number' => '09171234567',
             'course_title' => 'Introduction to Generative AI',
             'course_slug' => 'introduction-to-generative-ai',
+            'roll_no' => '2026-001',
+            'course_program' => 'BS Information Technology',
             'source_origin' => 'http://localhost:5173',
             'website' => '',
         ], $overrides);
@@ -62,6 +64,8 @@ class SkillsoftLeadApiTest extends TestCase
             'name' => 'Ada Lovelace',
             'institution_code' => 'lcc',
             'course_slug' => 'introduction-to-generative-ai',
+            'roll_no' => '2026-001',
+            'course_program' => 'BS Information Technology',
         ]);
         $this->assertDatabaseHas('applications', [
             'institution_code' => 'ndmc',
@@ -95,19 +99,28 @@ class SkillsoftLeadApiTest extends TestCase
         $this->assertDatabaseCount('applications', 0);
     }
 
-    public function test_email_domain_must_match_the_selected_institution(): void
+    public function test_any_email_domain_is_accepted(): void
     {
-        $this->postJson('/api/skillsoft-leads', $this->validLead([
-            'email' => 'ada@gmail.com',
-        ]))->assertUnprocessable()->assertJsonValidationErrors('email');
-
         $this->postJson('/api/skillsoft-leads', $this->validLead([
             'institution' => 'ndmc',
             'institution_name' => 'Notre Dame of Midsayap College, Inc.',
-            'email' => 'grace@legacycollege.edu.ph',
-        ]))->assertUnprocessable()->assertJsonValidationErrors('email');
+            'email' => 'grace@gmail.com',
+        ]))->assertCreated();
 
-        $this->assertDatabaseCount('applications', 0);
+        $this->postJson('/api/skillsoft-leads', $this->validLead([
+            'institution' => 'earist',
+            'institution_name' => 'Eulogio Amang Rodriguez Institute of Science and Technology',
+            'email' => 'learner@yahoo.com',
+        ]))->assertCreated();
+
+        $this->assertDatabaseHas('applications', [
+            'institution_code' => 'ndmc',
+            'email' => 'grace@gmail.com',
+        ]);
+        $this->assertDatabaseHas('applications', [
+            'institution_code' => 'earist',
+            'email' => 'learner@yahoo.com',
+        ]);
     }
 
     public function test_api_cors_allows_a_configured_origin_without_csrf(): void
@@ -166,10 +179,72 @@ class SkillsoftLeadApiTest extends TestCase
                 ->where('inquiries.0.id', $lead->id)
                 ->where('inquiries.0.institution_code', 'lcc')
                 ->where('inquiries.0.course_slug', 'introduction-to-generative-ai')
+                ->where('pagination.per_page', 20)
+                ->where('pagination.total', 1)
             );
 
         $this->actingAs(User::factory()->create(['role' => 'student']))
             ->get('/dashboard')
+            ->assertForbidden();
+    }
+
+    public function test_dashboard_filters_pages_and_exports_matching_inquiries(): void
+    {
+        foreach (range(1, 21) as $index) {
+            Application::create([
+                'name' => "Learner {$index}",
+                'email' => "learner{$index}@lcc.test",
+                'institution_code' => 'lcc',
+                'institution_name' => 'Legacy College of Compostela',
+                'course_title' => 'Forensic Science',
+                'status' => 'submitted',
+            ]);
+        }
+
+        Application::create([
+            'name' => 'Grace Hopper',
+            'email' => 'grace@ndmc.test',
+            'institution_code' => 'ndmc',
+            'institution_name' => 'Notre Dame of Midsayap College',
+            'course_title' => 'Cybersecurity',
+            'roll_no' => 'ND-100',
+            'status' => 'reviewed',
+        ]);
+
+        $admin = User::factory()->create(['role' => 'admin']);
+
+        $this->actingAs($admin)->get('/dashboard?per_page=20')
+            ->assertOk()
+            ->assertInertia(fn (Assert $page) => $page
+                ->where('pagination.per_page', 20)
+                ->where('pagination.total', 22)
+                ->where('pagination.last_page', 2)
+                ->has('inquiries', 20)
+            );
+
+        $this->actingAs($admin)->get('/dashboard?per_page=50&institution=ndmc&search=Grace')
+            ->assertOk()
+            ->assertInertia(fn (Assert $page) => $page
+                ->where('pagination.per_page', 50)
+                ->where('pagination.total', 1)
+                ->where('inquiries.0.email', 'grace@ndmc.test')
+            );
+
+        $this->actingAs($admin)->get('/dashboard?per_page=15')
+            ->assertOk()
+            ->assertInertia(fn (Assert $page) => $page
+                ->where('pagination.per_page', 20)
+            );
+
+        $export = $this->actingAs($admin)->get('/dashboard/export?institution=ndmc');
+        $export->assertOk();
+        $csv = $export->streamedContent();
+        $this->assertStringContainsString('grace@ndmc.test', $csv);
+        $this->assertStringContainsString('ID No.', $csv);
+        $this->assertStringNotContainsString('learner1@lcc.test', $csv);
+
+        $this->actingAs(User::factory()->create(['role' => 'student']))
+            ->get('/dashboard/export')
             ->assertForbidden();
     }
 }

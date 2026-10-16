@@ -26,6 +26,7 @@ class ApplicationController extends Controller
             'institution_name' => $data['institution_name'] ?? null,
             'address' => $data['address'] ?? null,
             'roll_no' => $data['roll_no'] ?? null,
+            'course_program' => $data['course_program'] ?? null,
             'year_of_study' => $data['year_of_study'] ?? null,
             'mobile_number' => $data['mobile_number'] ?? null,
             'course_title' => $data['course_title'],

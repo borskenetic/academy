@@ -24,6 +24,7 @@ class StoreApplicationRequest extends FormRequest
             'institution_name' => ['required_with:first_name', 'nullable', 'string', 'max:255'],
             'address' => ['required_with:first_name', 'nullable', 'string', 'max:1000'],
             'roll_no' => ['required_with:first_name', 'nullable', 'string', 'max:100'],
+            'course_program' => ['required_with:first_name', 'nullable', 'string', 'max:255'],
             'year_of_study' => ['required_with:first_name', 'nullable', 'string', 'max:50'],
             'mobile_number' => ['required_with:first_name', 'nullable', 'string', 'max:30'],
             'course_title' => ['required', 'string', 'max:255'],

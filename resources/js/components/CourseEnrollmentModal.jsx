@@ -5,7 +5,8 @@ const fields = [
   ['first_name', 'First Name', 'text'],
   ['last_name', 'Last Name', 'text'],
   ['institution_name', 'Institution Full Name', 'text'],
-  ['roll_no', 'Roll No./College ID No.', 'text'],
+  ['roll_no', 'ID No.', 'text'],
+  ['course_program', 'Course/Program', 'text'],
   ['year_of_study', 'Year of Study', 'text'],
   ['email', 'Email', 'email'],
   ['mobile_number', 'Mobile Number', 'tel']
@@ -24,6 +25,7 @@ export default function CourseEnrollmentModal({ course, onClose, startAt = 'deta
     institution_name: '',
     address: '',
     roll_no: '',
+    course_program: '',
     year_of_study: '',
     course_title: course.title,
     email: '',

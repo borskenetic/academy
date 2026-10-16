@@ -1,5 +1,8 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Head, Link, router, usePage } from '@inertiajs/react'
+
+const PAGE_SIZES = [20, 50, 100]
+const SIDEBAR_KEY = 'admin-sidebar-collapsed'
 
 const STATUS_STYLES = {
   submitted: 'bg-teal-bg text-teal-dark border-teal-light/40'
@@ -31,7 +34,11 @@ function Detail({ label, value }) {
   )
 }
 
-function Sidebar({ user, open, onClose }) {
+function NavLabel({ collapsed, children }) {
+  return <span className={collapsed ? 'lg:sr-only' : ''}>{children}</span>
+}
+
+function Sidebar({ user, open, collapsed, onClose, onToggleCollapse }) {
   return (
     <>
       {open && (
@@ -40,36 +47,52 @@ function Sidebar({ user, open, onClose }) {
       <aside
         id="admin-sidebar"
         aria-label="Admin navigation"
-        className={`fixed inset-y-0 left-0 z-50 flex w-72 max-w-[85vw] flex-col bg-navy text-white transition-transform duration-300 lg:sticky lg:top-0 lg:h-screen lg:translate-x-0 ${open ? 'translate-x-0' : '-translate-x-full'}`}
+        className={`fixed inset-y-0 left-0 z-50 flex w-72 max-w-[85vw] flex-col bg-navy text-white transition-all duration-300 lg:sticky lg:top-0 lg:h-screen lg:max-w-none lg:translate-x-0 ${open ? 'translate-x-0' : '-translate-x-full'} ${collapsed ? 'lg:w-[4.75rem]' : 'lg:w-72'}`}
       >
-        <a href="/" className="flex items-center gap-3 border-b border-white/10 px-6 py-5" aria-label="Area 51 home">
-          <img src="/logo.png" alt="" className="h-10 w-10 rounded-md bg-white object-contain p-0.5" />
-          <span>
-            <span className="block font-heading text-base font-extrabold tracking-wide">Area 51</span>
-            <span className="block text-[0.6rem] font-bold uppercase tracking-[0.18em] text-[#7fe7db]">Admin</span>
-          </span>
-        </a>
+        <div className={`flex items-center gap-3 border-b border-white/10 px-4 py-4 ${collapsed ? 'lg:flex-col lg:px-2' : ''}`}>
+          <a href="/" className="flex min-w-0 flex-1 items-center gap-3" aria-label="Area 51 home">
+            <img src="/logo.png" alt="" className="h-10 w-10 shrink-0 rounded-md bg-white object-contain p-0.5" />
+            <span className={collapsed ? 'lg:hidden' : ''}>
+              <span className="block font-heading text-base font-extrabold tracking-wide">Area 51</span>
+              <span className="block text-[0.6rem] font-bold uppercase tracking-[0.18em] text-[#7fe7db]">Admin</span>
+            </span>
+          </a>
+          <button
+            type="button"
+            onClick={onToggleCollapse}
+            aria-expanded={!collapsed}
+            aria-controls="admin-sidebar"
+            title={collapsed ? 'Expand sidebar' : 'Collapse sidebar'}
+            className="hidden h-10 w-10 shrink-0 items-center justify-center rounded-lg text-slate-200 transition-colors hover:bg-white/10 hover:text-white lg:inline-flex"
+          >
+            <svg viewBox="0 0 24 24" className={`h-5 w-5 transition-transform ${collapsed ? 'rotate-180' : ''}`} aria-hidden="true">
+              <path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+            <span className="sr-only">{collapsed ? 'Expand sidebar' : 'Collapse sidebar'}</span>
+          </button>
+        </div>
 
         <nav className="mt-4 flex-1 space-y-1 px-3">
-          <p className="px-3 pb-1 pt-2 text-[0.65rem] font-extrabold uppercase tracking-[0.18em] text-slate-400">Manage</p>
+          <p className={`px-3 pb-1 pt-2 text-[0.65rem] font-extrabold uppercase tracking-[0.18em] text-slate-400 ${collapsed ? 'lg:sr-only' : ''}`}>Manage</p>
           <Link
             href="/dashboard"
             onClick={onClose}
-            className="flex min-h-[44px] items-center gap-3 rounded-lg bg-teal px-3 py-2 text-sm font-bold text-white"
+            title="Inquiries"
+            className={`flex min-h-[44px] items-center gap-3 rounded-lg bg-teal px-3 py-2 text-sm font-bold text-white ${collapsed ? 'lg:justify-center lg:px-2' : ''}`}
           >
-            <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true"><path d="M3 3h18v18H3zM3 9h18M9 21V9" stroke="currentColor" strokeWidth="1.8" fill="none" strokeLinecap="round" strokeLinejoin="round" /></svg>
-            Inquiries
+            <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0" aria-hidden="true"><path d="M3 3h18v18H3zM3 9h18M9 21V9" stroke="currentColor" strokeWidth="1.8" fill="none" strokeLinecap="round" strokeLinejoin="round" /></svg>
+            <NavLabel collapsed={collapsed}>Inquiries</NavLabel>
           </Link>
-          <a href="/" className="flex min-h-[44px] items-center gap-3 rounded-lg px-3 py-2 text-sm font-semibold text-slate-200 transition-colors hover:bg-white/5 hover:text-white">
-            <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2" stroke="currentColor" strokeWidth="1.8" fill="none" strokeLinecap="round" strokeLinejoin="round" /></svg>
-            View website
+          <a href="/" title="View website" className={`flex min-h-[44px] items-center gap-3 rounded-lg px-3 py-2 text-sm font-semibold text-slate-200 transition-colors hover:bg-white/5 hover:text-white ${collapsed ? 'lg:justify-center lg:px-2' : ''}`}>
+            <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2" stroke="currentColor" strokeWidth="1.8" fill="none" strokeLinecap="round" strokeLinejoin="round" /></svg>
+            <NavLabel collapsed={collapsed}>View website</NavLabel>
           </a>
         </nav>
 
         <div className="border-t border-white/10 p-4">
-          <div className="flex items-center gap-3">
-            <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-[#f7b64a] text-sm font-extrabold text-[#0a1d2d]">{(user?.name || 'A').charAt(0)}</span>
-            <div className="min-w-0">
+          <div className={`flex items-center gap-3 ${collapsed ? 'lg:justify-center' : ''}`}>
+            <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-[#f7b64a] text-sm font-extrabold text-[#0a1d2d]" title={user?.name}>{(user?.name || 'A').charAt(0)}</span>
+            <div className={`min-w-0 ${collapsed ? 'lg:hidden' : ''}`}>
               <p className="truncate text-sm font-bold">{user?.name}</p>
               <p className="truncate text-xs text-slate-300">{user?.email}</p>
             </div>
@@ -77,15 +100,18 @@ function Sidebar({ user, open, onClose }) {
           <button
             type="button"
             onClick={() => router.post('/logout')}
-            className="mt-4 flex min-h-[44px] w-full items-center justify-center gap-2 rounded-lg border border-white/15 px-3 py-2 text-sm font-bold text-slate-200 transition-colors hover:bg-white/10 hover:text-white"
+            title="Log out"
+            className={`mt-4 flex min-h-[44px] w-full items-center justify-center gap-2 rounded-lg border border-white/15 px-3 py-2 text-sm font-bold text-slate-200 transition-colors hover:bg-white/10 hover:text-white ${collapsed ? 'lg:px-2' : ''}`}
           >
-            Log out
+            <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0" aria-hidden="true"><path d="M9 6H6a2 2 0 00-2 2v8a2 2 0 002 2h3M15 16l4-4-4-4M19 12H9" stroke="currentColor" strokeWidth="1.8" fill="none" strokeLinecap="round" strokeLinejoin="round" /></svg>
+            <NavLabel collapsed={collapsed}>Log out</NavLabel>
           </button>
         </div>
       </aside>
     </>
   )
 }
+
 function InquiryRow({ inquiry, expanded, onToggle }) {
   const applicant = [inquiry.first_name, inquiry.last_name].filter(Boolean).join(' ') || inquiry.name
   const institutionCode = inquiry.institution_code?.toUpperCase()
@@ -136,11 +162,10 @@ function InquiryRow({ inquiry, expanded, onToggle }) {
               <Detail label="Applicant category" value={inquiry.applicant_category} />
               <Detail label="Gender" value={inquiry.gender} />
               <Detail label="Education level" value={inquiry.education_level} />
-              <Detail label="Roll no." value={inquiry.roll_no} />
-              <Detail label="Eligibility / PRN" value={inquiry.eligibility_prn} />
+              <Detail label="ID No." value={inquiry.roll_no} />
+              <Detail label="Course/Program" value={inquiry.course_program} />
               <Detail label="Year of study" value={inquiry.year_of_study} />
               <Detail label="Address" value={inquiry.address} />
-              <Detail label="Pincode" value={inquiry.pincode} />
               <Detail label="Course slug" value={inquiry.course_slug} />
               <Detail label="Source page" value={inquiry.source_page} />
               <Detail label="Source origin" value={inquiry.source_origin} />
@@ -161,11 +186,73 @@ function InquiryRow({ inquiry, expanded, onToggle }) {
     </>
   )
 }
-export default function Dashboard({ inquiries = [], stats = {} }) {
+
+function queryParams(filters, pagination, overrides = {}) {
+  const next = {
+    search: filters.search || '',
+    institution: filters.institution || '',
+    status: filters.status || '',
+    from: filters.from || '',
+    to: filters.to || '',
+    per_page: pagination.per_page || 20,
+    page: pagination.current_page || 1,
+    ...overrides
+  }
+  return Object.fromEntries(
+    Object.entries(next).filter(([key, value]) => {
+      if (value === '' || value === null || value === undefined) return false
+      if (key === 'per_page' && Number(value) === 20) return false
+      if (key === 'page' && Number(value) === 1) return false
+      return true
+    })
+  )
+}
+
+function exportHref(filters) {
+  const params = new URLSearchParams(queryParams(filters, { per_page: 20, current_page: 1 }))
+  const query = params.toString()
+  return query ? `/dashboard/export?${query}` : '/dashboard/export'
+}
+
+function pageWindow(current, last) {
+  const start = Math.max(1, current - 2)
+  const end = Math.min(last, start + 4)
+  const pages = []
+  for (let page = Math.max(1, end - 4); page <= end; page += 1) pages.push(page)
+  return pages
+}
+
+const fieldClass = 'mt-1.5 min-h-[42px] w-full rounded-lg border border-line bg-white px-3 text-sm font-normal text-ink outline-none focus:border-teal focus:ring-2 focus:ring-teal/20'
+
+export default function Dashboard({
+  inquiries = [],
+  stats = {},
+  pagination = { current_page: 1, last_page: 1, per_page: 20, total: 0, from: null, to: null },
+  filters = { search: '', institution: '', status: '', from: '', to: '' },
+  institutions = [],
+  statuses = []
+}) {
   const { auth } = usePage().props
   const user = auth?.user
   const [sidebarOpen, setSidebarOpen] = useState(false)
+  const [collapsed, setCollapsed] = useState(() => {
+    if (typeof window === 'undefined') return false
+    return window.localStorage.getItem(SIDEBAR_KEY) === '1'
+  })
   const [expanded, setExpanded] = useState(() => new Set())
+  const [search, setSearch] = useState(filters.search || '')
+
+  useEffect(() => {
+    setSearch(filters.search || '')
+  }, [filters.search])
+
+  const toggleCollapse = () => {
+    setCollapsed((current) => {
+      const next = !current
+      window.localStorage.setItem(SIDEBAR_KEY, next ? '1' : '0')
+      return next
+    })
+  }
 
   const toggleRow = (id) => {
     setExpanded((prev) => {
@@ -176,27 +263,54 @@ export default function Dashboard({ inquiries = [], stats = {} }) {
     })
   }
 
+  const visit = (overrides) => {
+    router.get('/dashboard', queryParams(filters, pagination, overrides), {
+      preserveState: true,
+      preserveScroll: true,
+      replace: true,
+      only: ['inquiries', 'pagination', 'filters']
+    })
+  }
+
+  const pages = pageWindow(pagination.current_page, pagination.last_page)
+  const downloadUrl = exportHref(filters)
+
   return (
     <div className="flex min-h-screen bg-soft text-ink">
       <Head title="Admin Dashboard" />
-      <Sidebar user={user} open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+      <Sidebar
+        user={user}
+        open={sidebarOpen}
+        collapsed={collapsed}
+        onClose={() => setSidebarOpen(false)}
+        onToggleCollapse={toggleCollapse}
+      />
 
       <main className="min-w-0 flex-1">
-        {/* Mobile top bar */}
-        <div className="sticky top-0 z-30 flex h-16 items-center gap-3 border-b border-line bg-white px-4 lg:hidden">
+        <div className="sticky top-0 z-30 flex h-16 items-center gap-3 border-b border-line bg-white px-4">
           <button
             type="button"
             onClick={() => setSidebarOpen(true)}
             aria-label="Open admin navigation"
             aria-controls="admin-sidebar"
-            className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-line text-navy transition-colors hover:border-teal hover:text-teal"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-line text-navy transition-colors hover:border-teal hover:text-teal lg:hidden"
           >
             <svg viewBox="0 0 24 24" className="h-6 w-6" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg>
           </button>
-          <span className="font-heading text-base font-extrabold text-navy">Admin Dashboard</span>
+          <button
+            type="button"
+            onClick={toggleCollapse}
+            aria-expanded={!collapsed}
+            aria-controls="admin-sidebar"
+            className="hidden h-11 w-11 items-center justify-center rounded-lg border border-line text-navy transition-colors hover:border-teal hover:text-teal lg:inline-flex"
+          >
+            <svg viewBox="0 0 24 24" className="h-6 w-6" aria-hidden="true"><path d="M4 7h16M4 12h10M4 17h16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg>
+            <span className="sr-only">{collapsed ? 'Expand sidebar' : 'Collapse sidebar'}</span>
+          </button>
+          <span className="font-heading text-base font-extrabold text-navy">Course Inquiries</span>
         </div>
 
-        <div className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:py-10">
+        <div className="mx-auto w-full max-w-[90rem] px-4 py-8 sm:px-6 lg:px-8 lg:py-10">
           <header>
             <p className="mb-1.5 text-xs font-extrabold uppercase tracking-widest text-teal">Admin area</p>
             <h1 className="font-heading text-2xl font-bold text-navy sm:text-3xl">Course Inquiries</h1>
@@ -207,20 +321,109 @@ export default function Dashboard({ inquiries = [], stats = {} }) {
           </header>
 
           <section className="mt-6 grid gap-3 sm:grid-cols-3" aria-label="Inquiry statistics">
-            <StatCard label="Total inquiries" value={stats.total ?? inquiries.length} />
+            <StatCard label="Total inquiries" value={stats.total ?? pagination.total} />
             <StatCard label="Submitted" value={stats.submitted ?? 0} />
             <StatCard label="New today" value={stats.new_today ?? 0} />
           </section>
 
           <section className="mt-6 rounded-2xl border border-line bg-white shadow-sm" aria-labelledby="inquiries-h">
-            <div className="flex flex-wrap items-center justify-between gap-2 border-b border-line px-5 py-4">
+            <div className="flex flex-wrap items-center justify-between gap-3 border-b border-line px-5 py-4">
               <h2 id="inquiries-h" className="font-heading text-lg font-bold text-navy">All inquiries</h2>
-              <span className="text-xs font-bold text-muted">{inquiries.length} total</span>
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="text-xs font-bold text-muted">{pagination.total} matching</span>
+                <a
+                  href={downloadUrl}
+                  className={`inline-flex min-h-[40px] items-center gap-2 rounded-lg bg-navy px-3.5 py-2 text-sm font-bold text-white transition-colors hover:bg-navy/90 ${pagination.total === 0 ? 'pointer-events-none opacity-50' : ''}`}
+                  aria-disabled={pagination.total === 0}
+                >
+                  <svg viewBox="0 0 24 24" className="h-4 w-4" aria-hidden="true"><path d="M12 4v10m0 0l-4-4m4 4l4-4M5 18h14" stroke="currentColor" strokeWidth="1.8" fill="none" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                  Download CSV
+                </a>
+              </div>
             </div>
+
+            <form
+              className="grid gap-3 border-b border-line px-5 py-4 sm:grid-cols-2 xl:grid-cols-6"
+              onSubmit={(event) => {
+                event.preventDefault()
+                visit({ search: search.trim(), page: 1 })
+              }}
+            >
+              <label className="block text-xs font-extrabold uppercase tracking-wider text-muted sm:col-span-2">
+                Search
+                <input
+                  value={search}
+                  onChange={(event) => setSearch(event.target.value)}
+                  placeholder="Name, email, course, ID no."
+                  className={fieldClass}
+                />
+              </label>
+              <label className="block text-xs font-extrabold uppercase tracking-wider text-muted">
+                Institution
+                <select
+                  value={filters.institution || ''}
+                  onChange={(event) => visit({ institution: event.target.value, page: 1 })}
+                  className={fieldClass}
+                >
+                  <option value="">All institutions</option>
+                  {institutions.map((code) => (
+                    <option key={code} value={code}>{code.toUpperCase()}</option>
+                  ))}
+                </select>
+              </label>
+              <label className="block text-xs font-extrabold uppercase tracking-wider text-muted">
+                Status
+                <select
+                  value={filters.status || ''}
+                  onChange={(event) => visit({ status: event.target.value, page: 1 })}
+                  className={fieldClass}
+                >
+                  <option value="">All statuses</option>
+                  {statuses.map((status) => (
+                    <option key={status} value={status} className="capitalize">{status}</option>
+                  ))}
+                </select>
+              </label>
+              <label className="block text-xs font-extrabold uppercase tracking-wider text-muted">
+                From
+                <input
+                  type="date"
+                  value={filters.from || ''}
+                  onChange={(event) => visit({ from: event.target.value, page: 1 })}
+                  className={fieldClass}
+                />
+              </label>
+              <label className="block text-xs font-extrabold uppercase tracking-wider text-muted">
+                To
+                <input
+                  type="date"
+                  value={filters.to || ''}
+                  onChange={(event) => visit({ to: event.target.value, page: 1 })}
+                  className={fieldClass}
+                />
+              </label>
+              <div className="flex flex-wrap items-end gap-2 sm:col-span-2 xl:col-span-6">
+                <button type="submit" className="inline-flex min-h-[42px] items-center rounded-lg bg-teal px-4 py-2 text-sm font-bold text-white hover:bg-teal-dark">
+                  Search
+                </button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setSearch('')
+                    router.get('/dashboard', {}, { preserveScroll: true, replace: true })
+                  }}
+                  className="inline-flex min-h-[42px] items-center rounded-lg border border-line px-4 py-2 text-sm font-bold text-navy hover:border-teal hover:text-teal"
+                >
+                  Clear
+                </button>
+              </div>
+            </form>
 
             {inquiries.length === 0 ? (
               <p className="px-5 py-10 text-center text-sm text-muted">
-                No inquiries yet. Applications submitted through the site will appear here.
+                {pagination.total === 0 && !filters.search && !filters.institution && !filters.status && !filters.from && !filters.to
+                  ? 'No inquiries yet. Applications submitted through the site will appear here.'
+                  : 'No inquiries match these filters.'}
               </p>
             ) : (
               <div className="overflow-x-auto">
@@ -250,6 +453,55 @@ export default function Dashboard({ inquiries = [], stats = {} }) {
                 </table>
               </div>
             )}
+
+            <div className="flex flex-wrap items-center justify-between gap-3 border-t border-line px-5 py-4">
+              <p className="text-sm text-muted">
+                {pagination.total === 0
+                  ? 'Showing 0'
+                  : `Showing ${pagination.from}–${pagination.to} of ${pagination.total}`}
+              </p>
+              <div className="flex flex-wrap items-center gap-2">
+                <label className="flex items-center gap-2 text-sm font-semibold text-navy">
+                  Rows
+                  <select
+                    value={pagination.per_page}
+                    onChange={(event) => visit({ per_page: Number(event.target.value), page: 1 })}
+                    className="min-h-[40px] rounded-lg border border-line bg-white px-2 text-sm font-semibold"
+                  >
+                    {PAGE_SIZES.map((size) => (
+                      <option key={size} value={size}>{size}</option>
+                    ))}
+                  </select>
+                </label>
+                <button
+                  type="button"
+                  onClick={() => visit({ page: pagination.current_page - 1 })}
+                  disabled={pagination.current_page <= 1}
+                  className="inline-flex min-h-[40px] items-center rounded-lg border border-line px-3 text-sm font-bold text-navy hover:border-teal hover:text-teal disabled:cursor-not-allowed disabled:opacity-40"
+                >
+                  Previous
+                </button>
+                {pages.map((page) => (
+                  <button
+                    key={page}
+                    type="button"
+                    onClick={() => visit({ page })}
+                    aria-current={page === pagination.current_page ? 'page' : undefined}
+                    className={`inline-flex h-10 min-w-10 items-center justify-center rounded-lg border px-2 text-sm font-bold ${page === pagination.current_page ? 'border-teal bg-teal text-white' : 'border-line text-navy hover:border-teal hover:text-teal'}`}
+                  >
+                    {page}
+                  </button>
+                ))}
+                <button
+                  type="button"
+                  onClick={() => visit({ page: pagination.current_page + 1 })}
+                  disabled={pagination.current_page >= pagination.last_page}
+                  className="inline-flex min-h-[40px] items-center rounded-lg border border-line px-3 text-sm font-bold text-navy hover:border-teal hover:text-teal disabled:cursor-not-allowed disabled:opacity-40"
+                >
+                  Next
+                </button>
+              </div>
+            </div>
           </section>
         </div>
       </main>
