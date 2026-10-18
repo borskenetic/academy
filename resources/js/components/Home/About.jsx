@@ -60,7 +60,7 @@ export default function About() {
             </p>
           </div>
           <a
-            href="#learning-areas"
+            href="#core-skillsoft-courses"
             className="inline-flex min-h-[44px] items-center gap-2 rounded-xl bg-teal px-6 py-3 font-bold text-white transition-all duration-200 hover:bg-teal-dark hover:brightness-105 active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal"
           >
             Explore Skillsoft Courses

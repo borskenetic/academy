@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { Link, usePage } from '@inertiajs/react'
 import { useUI } from '../context/UIContext'
 import SectionLink from './SectionLink'
+import { PROGRAM_GROUPS } from '../data/courseGroups'
 
 // Section anchors live on the landing page. Every nav entry uses SectionLink
 // (not a raw `#hash`) so it also works from /program, /cse-courses,
@@ -108,7 +109,7 @@ function MobileNav({ open, user }) {
     { label: 'CSE Courses', to: '/cse-courses' }
   ]
   const sections = [
-    { label: 'Learn', hash: 'learning-areas' },
+    { label: 'Learn', hash: 'core-skillsoft-courses' },
     { label: 'Certifications', hash: 'certifications' },
     { label: 'For Institutions', hash: 'audience' },
     { label: 'About', hash: 'about' },
@@ -142,6 +143,61 @@ function MobileNav({ open, user }) {
           </Link>
         </div>
       </nav>
+    </div>
+  )
+}
+
+function CatalogDropdown({ current = '' }) {
+  const [open, setOpen] = useState(false)
+  const ref = useRef(null)
+
+  useEffect(() => {
+    if (!open) return undefined
+    function onDoc(e) {
+      if (ref.current && !ref.current.contains(e.target)) setOpen(false)
+    }
+    function onKey(e) {
+      if (e.key === 'Escape') setOpen(false)
+    }
+    document.addEventListener('mousedown', onDoc)
+    document.addEventListener('keydown', onKey)
+    return () => {
+      document.removeEventListener('mousedown', onDoc)
+      document.removeEventListener('keydown', onKey)
+    }
+  }, [open])
+
+  return (
+    <div className="relative" ref={ref}>
+      <button
+        type="button"
+        aria-expanded={open}
+        aria-haspopup="true"
+        onClick={() => setOpen((o) => !o)}
+        className={`${navLinkCls} ${current === '/skillsoft-catalog' ? 'text-teal' : ''}`}
+      >
+        Skillsoft Catalog
+        <svg viewBox="0 0 20 20" aria-hidden="true" className={`h-4 w-4 transition-transform duration-200 ${open ? 'rotate-180' : ''}`}>
+          <path d="M5.5 7.5 10 12l4.5-4.5" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </button>
+      {open && (
+        <div className="absolute left-0 top-full z-[70] mt-2 max-h-[70vh] w-72 overflow-y-auto rounded-xl border border-line bg-white p-3 shadow-xl">
+          <Link href="/skillsoft-catalog" onClick={() => setOpen(false)} className="flex min-h-[44px] items-center rounded-lg px-3 py-2 text-sm font-semibold text-ink transition-colors hover:bg-soft hover:text-teal">
+            All Courses
+          </Link>
+          {PROGRAM_GROUPS.map((group) => (
+            <Link
+              key={group}
+              href={`/skillsoft-catalog?cat=${encodeURIComponent(group)}`}
+              onClick={() => setOpen(false)}
+              className="flex min-h-[44px] items-center rounded-lg px-3 py-1.5 text-sm font-medium text-ink transition-colors hover:bg-soft hover:text-teal"
+            >
+              {group}
+            </Link>
+          ))}
+        </div>
+      )}
     </div>
   )
 }
@@ -234,12 +290,7 @@ function HomeHeader() {
           {/* Desktop navigation */}
           <nav className="ml-2 hidden items-center gap-1 xl:flex 2xl:ml-6" id="site-nav" aria-label="Main navigation">
             <TopLink hash="home"> Home</TopLink>
-            <a
-              href="/#core-skillsoft-courses"
-              className="inline-flex items-center whitespace-nowrap rounded-md px-3 py-2 text-sm font-semibold text-ink transition-colors hover:bg-soft hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal"
-            >
-              Skillsoft Courses
-            </a>
+            <CatalogDropdown current={pathname} />
             <TopLink hash="audience">For Institutions</TopLink>
             <TopLink hash="about">About</TopLink>
             <NavDropdown label="Support" items={SUPPORT_ITEMS} />

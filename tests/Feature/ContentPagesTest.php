@@ -251,6 +251,20 @@ class ContentPagesTest extends TestCase
         $this->seed(RequestedCatalogSeeder::class);
 
         $this->get('/courses/bogus/anything')->assertNotFound();
-        $this->get('/courses/core/not-a-real-course')->assertNotFound();
+        $this->get('/courses/core/not-a-real-course')
+            ->assertOk()
+            ->assertInertia(fn (Assert $page) => $page
+                ->component('pages/CourseDetails')
+                ->where('course', null)
+                ->where('type', 'core')
+                ->where('slug', 'not-a-real-course')
+            );
+        $this->get('/courses/skillsoft/introduction-to-criminology')
+            ->assertOk()
+            ->assertInertia(fn (Assert $page) => $page
+                ->component('pages/CourseDetails')
+                ->where('type', 'skillsoft')
+                ->where('slug', 'introduction-to-criminology')
+            );
     }
 }

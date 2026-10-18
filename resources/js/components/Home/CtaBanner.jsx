@@ -19,7 +19,7 @@ export default function CtaBanner() {
         </div>
         <div className="lg:justify-self-end">
           <a
-            href="#learning-areas"
+            href="#core-skillsoft-courses"
             className="inline-flex min-h-[44px] w-full items-center justify-center gap-2 rounded-xl bg-gold px-7 py-3 font-bold text-navy transition-all duration-200 hover:bg-yellow-500 hover:brightness-105 active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:w-auto"
           >
             Start Learning with Skillsoft

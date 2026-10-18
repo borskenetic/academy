@@ -1,5 +1,4 @@
 import { Link } from '@inertiajs/react'
-import SectionLink from '../components/SectionLink'
 import {
   SectionHero,
   QuickHighlights,
@@ -19,7 +18,7 @@ export default function CseCourses({ program: CSE, journeys = [] }) {
       <div className="max-w-[1200px] mx-auto px-6 pt-4 text-sm text-muted" aria-label="Breadcrumb">
         <Link className="text-teal font-semibold hover:underline" href="/">Home</Link>
         <span> › </span>
-        <SectionLink to="/" hash="learning-areas" className="text-teal font-semibold hover:underline">Skillsoft Streams</SectionLink>
+        <Link href="/skillsoft-catalog" className="text-teal font-semibold hover:underline">Skillsoft Streams</Link>
         <span> › </span>
         <span>Computer Science Engineering</span>
       </div>

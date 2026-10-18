@@ -93,7 +93,7 @@ function HomeFooter() {
             <ul className="space-y-3 text-base text-slate-300">
               <li><FooterLink href="#">Home</FooterLink></li>
               <li><FooterLink href="#about">About Us</FooterLink></li>
-              <li><FooterLink href="#learning-areas">Our Courses</FooterLink></li>
+              <li><FooterLink href="#core-skillsoft-courses">Our Courses</FooterLink></li>
               <li><FooterLink href="#footer">Contact Us</FooterLink></li>
             </ul>
           </FooterColumn>
@@ -116,7 +116,7 @@ function HomeFooter() {
               <ul className="space-y-3 text-base text-slate-300">
                 <li><FooterLink href="#">Home</FooterLink></li>
                 <li><FooterLink href="#about">About Us</FooterLink></li>
-                <li><FooterLink href="#learning-areas">Our Courses</FooterLink></li>
+                <li><FooterLink href="#core-skillsoft-courses">Our Courses</FooterLink></li>
                 <li><FooterLink href="#footer">Contact Us</FooterLink></li>
               </ul>
             </MobileAccordion>

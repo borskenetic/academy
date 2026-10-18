@@ -1,7 +1,8 @@
 import { useState } from 'react'
-import { Link, usePage } from '@inertiajs/react'
+import { Link } from '@inertiajs/react'
 import { useUI } from '../context/UIContext'
 import { RegisterForm } from './AuthForms'
+import { CATALOG_COURSES, courseDetailPath } from '../data/catalog'
 
 // Search dialog backed by the real Skillsoft catalog (source: Content-Mapping workbook).
 const POPULAR = ['Python', 'AI', 'Data', 'Cybersecurity', 'DevOps', 'Machine Learning']
@@ -27,8 +28,7 @@ function ModalShell({ children, onClose, width }) {
 
 function SearchModal({ onClose }) {
   const { showToast } = useUI()
-  const { catalog } = usePage().props
-  const SKILLSOFT_COURSES = catalog || []
+  const SKILLSOFT_COURSES = CATALOG_COURSES
   const [query, setQuery] = useState('')
   const [results, setResults] = useState([])
   const [searched, setSearched] = useState(false)
@@ -98,7 +98,7 @@ function SearchModal({ onClose }) {
         {results.map((course) => (
           <Link
             key={course.slug}
-            href={'/skillsoft-catalog#' + course.slug}
+            href={courseDetailPath(course)}
             onClick={onClose}
             className="flex items-center justify-between gap-3 rounded-xl border border-line px-4 py-2.5 text-sm transition-colors hover:border-teal hover:bg-teal-bg"
           >

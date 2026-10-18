@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { Link, useForm } from '@inertiajs/react'
-import SectionLink from '../components/SectionLink'
 import { useUI } from '../context/UIContext'
 
 const GROUP_ORDER = ['PE-1', 'PE-2', 'PE-3', 'PE-4', 'PE-5', 'PE-6', 'Additional']
@@ -293,7 +292,7 @@ export function SectionHero({ P }) {
           </p>
           <div className="flex gap-3 flex-wrap">
             <a href="#catalog" className="button button-teal button-large">View Courses <span aria-hidden="true">→</span></a>
-            <SectionLink to="/" hash="learning-areas" className="button button-large border border-white/60 text-white hover:bg-white/10">Explore All Skillsoft Streams</SectionLink>
+            <Link href="/skillsoft-catalog" className="button button-large border border-white/60 text-white hover:bg-white/10">Explore All Skillsoft Streams</Link>
           </div>
         </div>
         <aside className="bg-white text-ink rounded-2xl p-6 shadow-xl" aria-label="Program summary">
@@ -353,7 +352,7 @@ export default function ProgramPage({ program, programKey }) {
       <div className="max-w-[1200px] mx-auto px-6 pt-4 text-sm text-muted" aria-label="Breadcrumb">
         <Link className="text-teal font-semibold hover:underline" href="/">Home</Link>
         <span> › </span>
-        <SectionLink to="/" hash="learning-areas" className="text-teal font-semibold hover:underline">Skillsoft Streams</SectionLink>
+        <Link href="/skillsoft-catalog" className="text-teal font-semibold hover:underline">Skillsoft Streams</Link>
         <span> › </span>
         <span>{P.short}</span>
       </div>
