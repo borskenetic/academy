@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { Link, usePage } from '@inertiajs/react'
 import { useUI } from '../context/UIContext'
 import SectionLink from './SectionLink'
-import { PROGRAM_GROUPS } from '../data/courseGroups'
+import { SKILLSOFT_CATEGORIES } from '../data/courseGroups'
 
 // Section anchors live on the landing page. Every nav entry uses SectionLink
 // (not a raw `#hash`) so it also works from /program, /cse-courses,
@@ -102,15 +102,8 @@ const mobileLinkCls =
   'transition-colors hover:bg-soft hover:text-teal ' +
   'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal'
 
-function MobileNav({ open, user }) {
-  const pages = [
-    { label: 'Programs', to: '/program' },
-    { label: 'Skillsoft Catalog', to: '/skillsoft-catalog' },
-    { label: 'CSE Courses', to: '/cse-courses' }
-  ]
+function MobileNav({ open, user, activeCategory }) {
   const sections = [
-    { label: 'Learn', hash: 'core-skillsoft-courses' },
-    { label: 'Certifications', hash: 'certifications' },
     { label: 'For Institutions', hash: 'audience' },
     { label: 'About', hash: 'about' },
     { label: 'Support', hash: 'footer' }
@@ -119,15 +112,21 @@ function MobileNav({ open, user }) {
   return (
     <div
       id="mobile-nav"
-      className={`xl:hidden overflow-hidden bg-white transition-all duration-300 ease-in-out ${open ? 'max-h-[620px] opacity-100' : 'max-h-0 opacity-0'}`}
+      className={`xl:hidden overflow-y-auto bg-white transition-all duration-300 ease-in-out ${open ? 'max-h-[80vh] opacity-100' : 'max-h-0 opacity-0'}`}
       aria-hidden={!open}
       {...(!open ? { inert: '' } : {})}
     >
       <nav className="px-4 sm:px-6" aria-label="Mobile navigation">
         <div className="grid gap-0.5 border-t border-line">
-          {pages.map((l) => (
-            <Link key={l.to} href={l.to} className={mobileLinkCls}>
-              {l.label}
+          <p className="px-3 pb-1 pt-3 text-[0.65rem] font-extrabold uppercase tracking-[0.16em] text-muted">Skillsoft Courses</p>
+          <Link href="/skillsoft-catalog" className={mobileLinkCls}>All courses</Link>
+          {SKILLSOFT_CATEGORIES.map((category) => (
+            <Link
+              key={category}
+              href={`/skillsoft-catalog?cat=${encodeURIComponent(category)}`}
+              className={`${mobileLinkCls} ${activeCategory === category ? 'bg-soft text-navy' : ''}`}
+            >
+              {category}
             </Link>
           ))}
           {sections.map((l) => (
@@ -147,7 +146,7 @@ function MobileNav({ open, user }) {
   )
 }
 
-function CatalogDropdown({ current = '' }) {
+function SkillsoftCoursesDropdown({ activeCategory = '' }) {
   const [open, setOpen] = useState(false)
   const ref = useRef(null)
 
@@ -174,28 +173,30 @@ function CatalogDropdown({ current = '' }) {
         aria-expanded={open}
         aria-haspopup="true"
         onClick={() => setOpen((o) => !o)}
-        className={`${navLinkCls} ${current === '/skillsoft-catalog' ? 'text-teal' : ''}`}
+        className={`${navLinkCls} gap-1 ${activeCategory ? 'text-teal' : ''}`}
       >
-        Skillsoft Catalog
+        Skillsoft Courses
         <svg viewBox="0 0 20 20" aria-hidden="true" className={`h-4 w-4 transition-transform duration-200 ${open ? 'rotate-180' : ''}`}>
           <path d="M5.5 7.5 10 12l4.5-4.5" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       </button>
       {open && (
-        <div className="absolute left-0 top-full z-[70] mt-2 max-h-[70vh] w-72 overflow-y-auto rounded-xl border border-line bg-white p-3 shadow-xl">
-          <Link href="/skillsoft-catalog" onClick={() => setOpen(false)} className="flex min-h-[44px] items-center rounded-lg px-3 py-2 text-sm font-semibold text-ink transition-colors hover:bg-soft hover:text-teal">
-            All Courses
-          </Link>
-          {PROGRAM_GROUPS.map((group) => (
-            <Link
-              key={group}
-              href={`/skillsoft-catalog?cat=${encodeURIComponent(group)}`}
-              onClick={() => setOpen(false)}
-              className="flex min-h-[44px] items-center rounded-lg px-3 py-1.5 text-sm font-medium text-ink transition-colors hover:bg-soft hover:text-teal"
-            >
-              {group}
-            </Link>
-          ))}
+        <div className="absolute left-0 top-full z-[70] mt-2 w-64 rounded-2xl border border-line bg-white p-2 shadow-xl">
+          <p className="px-3 pb-1 pt-2 text-[0.65rem] font-extrabold uppercase tracking-[0.16em] text-slate-400">Browse by category</p>
+          {SKILLSOFT_CATEGORIES.map((category) => {
+            const active = activeCategory === category
+            return (
+              <Link
+                key={category}
+                href={`/skillsoft-catalog?cat=${encodeURIComponent(category)}`}
+                onClick={() => setOpen(false)}
+                aria-current={active ? 'page' : undefined}
+                className={`mt-0.5 flex min-h-[40px] items-center rounded-lg px-3 text-sm font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal ${active ? 'bg-soft text-navy' : 'text-navy hover:bg-soft'}`}
+              >
+                {category}
+              </Link>
+            )
+          })}
         </div>
       )}
     </div>
@@ -269,6 +270,9 @@ function HomeHeader() {
   const { url, props } = usePage()
   const user = props.auth?.user
   const pathname = url.split('?')[0].split('#')[0]
+  const activeCategory = pathname === '/skillsoft-catalog'
+    ? (new URLSearchParams(url.split('?')[1] || '').get('cat') || '')
+    : ''
   const [mobileOpen, setMobileOpen] = useState(false)
 
   return (
@@ -290,7 +294,7 @@ function HomeHeader() {
           {/* Desktop navigation */}
           <nav className="ml-2 hidden items-center gap-1 xl:flex 2xl:ml-6" id="site-nav" aria-label="Main navigation">
             <TopLink hash="home"> Home</TopLink>
-            <CatalogDropdown current={pathname} />
+            <SkillsoftCoursesDropdown activeCategory={activeCategory} />
             <TopLink hash="audience">For Institutions</TopLink>
             <TopLink hash="about">About</TopLink>
             <NavDropdown label="Support" items={SUPPORT_ITEMS} />
@@ -338,7 +342,7 @@ function HomeHeader() {
         </div>
       </div>
 
-      <MobileNav open={mobileOpen} user={user} />
+      <MobileNav open={mobileOpen} user={user} activeCategory={activeCategory} />
     </header>
   )
 }

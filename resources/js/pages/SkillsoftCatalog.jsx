@@ -1,9 +1,9 @@
 import { useEffect, useMemo, useState } from 'react'
-import { Link, usePage } from '@inertiajs/react'
+import { Link, router, usePage } from '@inertiajs/react'
 import { CATALOG_COURSES, courseDetailPath } from '../data/catalog'
-import { COURSE_PRICE, PROGRAM_GROUPS, courseMatchesGroup } from '../data/courseGroups'
+import { COURSE_PRICE, SKILLSOFT_CATEGORIES, courseMatchesGroup } from '../data/courseGroups'
 
-const CATEGORIES = PROGRAM_GROUPS
+const CATEGORIES = SKILLSOFT_CATEGORIES
 
 const focusCls =
   'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal'
@@ -118,7 +118,17 @@ export default function SkillsoftCatalogPage({ cat = 'All' }) {
 
   useEffect(() => {
     if (paramCat && CATEGORIES.includes(paramCat)) setActiveCat(paramCat)
+    else if (!paramCat) setActiveCat('All')
   }, [paramCat])
+
+  const setCat = (group) => {
+    setActiveCat(group)
+    router.get('/skillsoft-catalog', group === 'All' ? {} : { cat: group }, {
+      preserveState: true,
+      preserveScroll: true,
+      replace: true,
+    })
+  }
 
   const counts = useMemo(() => {
     const map = { All: CATALOG_COURSES.length }
@@ -169,7 +179,7 @@ export default function SkillsoftCatalogPage({ cat = 'All' }) {
             <div className="mt-3 space-y-2.5">
               <div className="hidden w-full flex-wrap gap-2 lg:flex" role="group" aria-label="Filter courses by category">
                 {['All', ...CATEGORIES].map((group) => (
-                  <ChipButton key={group} label={group} active={activeCat === group} onClick={() => setActiveCat(group)} />
+                  <ChipButton key={group} label={group} active={activeCat === group} onClick={() => setCat(group)} />
                 ))}
               </div>
 
@@ -232,7 +242,7 @@ export default function SkillsoftCatalogPage({ cat = 'All' }) {
                 type="button"
                 onClick={() => {
                   setQuery('')
-                  setActiveCat('All')
+                  setCat('All')
                 }}
                 className="mt-4 inline-flex min-h-[44px] items-center rounded-lg border border-teal bg-white px-5 text-sm font-bold text-teal transition-colors hover:bg-teal-bg"
               >
@@ -248,7 +258,7 @@ export default function SkillsoftCatalogPage({ cat = 'All' }) {
         onClose={() => setSheetOpen(false)}
         active={activeCat}
         onApply={(group) => {
-          setActiveCat(group)
+          setCat(group)
           setSheetOpen(false)
         }}
         counts={counts}

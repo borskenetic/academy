@@ -5,6 +5,16 @@
 
 export const COURSE_PRICE = 'Php 850'
 
+export const SKILLSOFT_CATEGORIES = [
+  'AI',
+  'Data & Analytics',
+  'Development',
+  'DevOps & Cloud',
+  'Cybersecurity',
+  'Business & Finance',
+  'Design & Innovation'
+]
+
 export const PROGRAM_GROUPS = [
   'AI',
   'Data & Analytics',
