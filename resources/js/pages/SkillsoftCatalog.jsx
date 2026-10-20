@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Link, router, usePage } from '@inertiajs/react'
 import { CATALOG_COURSES, courseDetailPath } from '../data/catalog'
-import { COURSE_PRICE, SKILLSOFT_CATEGORIES, courseMatchesGroup } from '../data/courseGroups'
+import { SKILLSOFT_CATEGORIES, courseMatchesGroup } from '../data/courseGroups'
 
 const CATEGORIES = SKILLSOFT_CATEGORIES
 
@@ -52,7 +52,6 @@ function CourseCard({ course }) {
         </div>
         <h3 className="font-heading text-lg font-bold leading-snug text-navy line-clamp-2">{course.title}</h3>
         {course.duration ? <p className="text-sm text-muted">{course.duration}</p> : null}
-        <p className="text-sm font-bold text-navy">{COURSE_PRICE}</p>
         <p className="line-clamp-2 text-sm leading-relaxed text-muted">{course.overview}</p>
         <span className="mt-1 inline-flex items-center self-start text-sm font-bold text-teal transition-colors group-hover:text-teal-dark">
           View Course

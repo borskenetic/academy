@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from '@inertiajs/react'
 import { CORE_COURSES } from '../../data/currentCatalog'
-import { assignProgramGroup, COURSE_PRICE } from '../../data/courseGroups'
+import { assignProgramGroup } from '../../data/courseGroups'
 
 export default function CoreSkillsoftCourses() {
   const [visible, setVisible] = useState(8)
@@ -34,7 +34,6 @@ export default function CoreSkillsoftCourses() {
               <div className="flex flex-1 flex-col p-4">
                 <span className="w-fit rounded-full bg-teal/[0.08] px-2.5 py-1 text-[0.68rem] font-bold uppercase tracking-wider text-teal">{assignProgramGroup(course)}</span>
                 <h3 className="mt-3 font-heading text-sm font-bold leading-snug text-navy sm:text-base">{course.title}</h3>
-                <p className="mt-2 text-sm font-bold text-navy">{COURSE_PRICE}</p>
                 <span className="mt-auto pt-4 text-sm font-bold text-teal">View description →</span>
               </div>
             </Link>

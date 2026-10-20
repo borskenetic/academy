@@ -3,7 +3,27 @@
  * (the shared catalog), rather than an institution's college names.
  */
 
-export const COURSE_PRICE = 'Php 850'
+
+/** AI courses appear under every catalog filter / program group. */
+function isAllFilterCourse(course) {
+  if (!course) return false
+  if (course.category === 'AI') return true
+  if (Array.isArray(course.categories) && course.categories.includes('AI')) return true
+
+  const title = String(course.title || '')
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, ' ')
+
+  if (/^ai\b/.test(title)) return true
+  if (title.includes('generative ai')) return true
+  if (title.includes('machine learning')) return true
+  if (title.includes('deep learning')) return true
+  if (title.includes('prompt engineering')) return true
+  if (/\bnlp\b/.test(title) || title.includes('llms')) return true
+  return false
+}
+
 
 export const SKILLSOFT_CATEGORIES = [
   'AI',
@@ -31,6 +51,7 @@ export const PROGRAM_GROUPS = [
 ]
 
 export function assignProgramGroups(course) {
+  if (isAllFilterCourse(course)) return [...SKILLSOFT_CATEGORIES]
   const raw = course?.categories?.length
     ? course.categories
     : [course?.category].filter(Boolean)

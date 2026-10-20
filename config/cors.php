@@ -6,11 +6,11 @@ $configuredOrigins = array_filter(array_map(
 ));
 
 return [
-    'paths' => ['api/skillsoft-leads'],
-    'allowed_methods' => ['POST', 'OPTIONS'],
+    'paths' => ['api/*'],
+    'allowed_methods' => ['GET', 'POST', 'OPTIONS'],
     'allowed_origins' => array_values($configuredOrigins),
     'allowed_origins_patterns' => [],
-    'allowed_headers' => ['Content-Type', 'Accept'],
+    'allowed_headers' => ['Content-Type', 'Accept', 'Authorization'],
     'exposed_headers' => [],
     'max_age' => 600,
     'supports_credentials' => false,

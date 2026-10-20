@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link } from '@inertiajs/react'
 import CourseRegisterModal from '../components/CourseRegisterModal'
 import { findCourse } from '../data/catalog'
-import { assignProgramGroup, COURSE_PRICE } from '../data/courseGroups'
+import { assignProgramGroup } from '../data/courseGroups'
 
 const TYPE_LABELS = {
   core: 'Core courses',
@@ -51,7 +51,6 @@ export default function CourseDetails({ course: serverCourse = null, type, slug 
             <p className="text-xs font-extrabold uppercase tracking-widest text-teal">{assignProgramGroup(course)}</p>
             <h1 className="mt-2 font-heading text-3xl font-bold tracking-tight text-navy sm:text-4xl">{course.title}</h1>
             {course.duration && <p className="mt-3 text-sm font-semibold text-muted">Duration: {course.duration}</p>}
-            <p className="mt-2 text-base font-bold text-navy">Price: {COURSE_PRICE}</p>
             <p className="mt-6 max-w-4xl text-base leading-8 text-muted">{course.overview}</p>
             {outcomes.length > 0 && (
               <>

@@ -36,6 +36,17 @@ class DatabaseSeeder extends Seeder
                 'name' => 'Area 51 Admin',
                 'password' => 'password',
                 'role' => 'admin',
+                'institution_code' => null,
+            ]
+        );
+
+        User::query()->updateOrCreate(
+            ['email' => 'admin@sjit.edu.ph'],
+            [
+                'name' => 'SJIT Admin',
+                'password' => 'password',
+                'role' => 'admin',
+                'institution_code' => 'sjit',
             ]
         );
     }

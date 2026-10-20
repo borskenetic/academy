@@ -239,10 +239,6 @@ export function Catalog({ P, programKey = null }) {
         </div>
       )}
 
-      <p style={{ marginTop: '1rem', fontSize: '.85rem', color: '#536274' }}>
-        Listed fee per course record: <strong>Rs. 885 incl. GST</strong>.
-      </p>
-
       {applyFor && <ApplyModal course={applyFor} programKey={programKey} onClose={() => setApplyFor(null)} />}
     </section>
   )
@@ -301,7 +297,6 @@ export function SectionHero({ P }) {
             <li><span>✓ Professional Elective groups (PE-1 to PE-6) mapped to Year 3 &amp; Year 4.</span></li>
             <li><span>✓ {P.courses.length} mapped courses with duration, credits and codes.</span></li>
             <li><span>✓ Additional Learning track for industry trends.</span></li>
-            <li><span>✓ Listed fee Rs. 885 incl. GST per course.</span></li>
           </ul>
         </aside>
       </div>
@@ -311,7 +306,7 @@ export function SectionHero({ P }) {
 
 export function QuickHighlights({ peCount, hasAdditional, semLabel }) {
   return (
-    <div className="max-w-[1200px] mx-auto px-6 pt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-4" aria-label="Quick highlights">
+    <div className="max-w-[1200px] mx-auto px-6 pt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3" aria-label="Quick highlights">
       <div className="bg-soft border border-line rounded-xl px-5 py-4">
         <div className="font-heading font-extrabold text-2xl text-navy">{peCount}</div>
         <div className="text-sm text-muted">Professional Elective Groups</div>
@@ -323,10 +318,6 @@ export function QuickHighlights({ peCount, hasAdditional, semLabel }) {
       <div className="bg-soft border border-line rounded-xl px-5 py-4">
         <div className="font-heading font-extrabold text-2xl text-navy">{semLabel.length > 30 ? 'Year 3 & Year 4' : semLabel}</div>
         <div className="text-sm text-muted">Semester Mapping</div>
-      </div>
-      <div className="bg-soft border border-line rounded-xl px-5 py-4">
-        <div className="font-heading font-extrabold text-2xl text-navy">Rs. 885</div>
-        <div className="text-sm text-muted">Listed Fee Incl. GST</div>
       </div>
     </div>
   )

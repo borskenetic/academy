@@ -31,7 +31,7 @@ class StoreSkillsoftLeadRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'institution' => ['required', 'string', 'in:lcc,ndmc,earist,zppsu,jmc,area51'],
+            'institution' => ['required', 'string', 'in:lcc,ndmc,earist,zppsu,jmc,area51,siit,sjit'],
             'institution_name' => ['required', 'string', 'max:255'],
             'first_name' => ['required', 'string', 'max:100'],
             'last_name' => ['required', 'string', 'max:100'],
