@@ -7,7 +7,7 @@ $configuredOrigins = array_filter(array_map(
 
 return [
     'paths' => ['api/*'],
-    'allowed_methods' => ['GET', 'POST', 'OPTIONS'],
+    'allowed_methods' => ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     'allowed_origins' => array_values($configuredOrigins),
     'allowed_origins_patterns' => [],
     'allowed_headers' => ['Content-Type', 'Accept', 'Authorization'],

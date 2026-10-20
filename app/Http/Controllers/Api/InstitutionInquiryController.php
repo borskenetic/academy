@@ -45,6 +45,7 @@ class InstitutionInquiryController extends Controller
         return response()->json([
             'token' => $plain,
             'user' => [
+                'id' => $user->id,
                 'name' => $user->name,
                 'email' => $user->email,
                 'institution_code' => $user->institution_code,
@@ -235,7 +236,11 @@ class InstitutionInquiryController extends Controller
             'course_program' => $application->course_program,
             'year_of_study' => $application->year_of_study,
             'course_title' => $application->course_title,
+            'course_slug' => $application->course_slug,
+            'course_url' => $application->course_url,
             'program' => $application->program?->name,
+            'source_page' => $application->source_page,
+            'source_origin' => $application->source_origin,
             'status' => $application->status,
             'submitted_at' => $application->created_at?->toFormattedDateString(),
         ];
