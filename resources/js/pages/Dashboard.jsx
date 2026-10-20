@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
-import { Head, Link, router, usePage } from '@inertiajs/react'
+import { Head, router, usePage } from '@inertiajs/react'
+import AdminSidebar, { useAdminChrome } from '../components/AdminSidebar'
 
 const PAGE_SIZES = [20, 50, 100]
-const SIDEBAR_KEY = 'admin-sidebar-collapsed'
 
 const STATUS_STYLES = {
   submitted: 'bg-teal-bg text-teal-dark border-teal-light/40'
@@ -31,84 +31,6 @@ function Detail({ label, value }) {
       <dt className="text-xs font-extrabold uppercase tracking-wider text-muted">{label}</dt>
       <dd className="mt-0.5 text-sm font-semibold text-ink">{value || '—'}</dd>
     </div>
-  )
-}
-
-function NavLabel({ collapsed, children }) {
-  return <span className={collapsed ? 'lg:sr-only' : ''}>{children}</span>
-}
-
-function Sidebar({ user, open, collapsed, onClose, onToggleCollapse }) {
-  return (
-    <>
-      {open && (
-        <div className="fixed inset-0 z-40 bg-navy/60 lg:hidden" onClick={onClose} aria-hidden="true" />
-      )}
-      <aside
-        id="admin-sidebar"
-        aria-label="Admin navigation"
-        className={`fixed inset-y-0 left-0 z-50 flex w-72 max-w-[85vw] flex-col bg-navy text-white transition-all duration-300 lg:sticky lg:top-0 lg:h-screen lg:max-w-none lg:translate-x-0 ${open ? 'translate-x-0' : '-translate-x-full'} ${collapsed ? 'lg:w-[4.75rem]' : 'lg:w-72'}`}
-      >
-        <div className={`flex items-center gap-3 border-b border-white/10 px-4 py-4 ${collapsed ? 'lg:flex-col lg:px-2' : ''}`}>
-          <a href="/" className="flex min-w-0 flex-1 items-center gap-3" aria-label="Area 51 home">
-            <img src="/logo.png" alt="" className="h-10 w-10 shrink-0 rounded-md bg-white object-contain p-0.5" />
-            <span className={collapsed ? 'lg:hidden' : ''}>
-              <span className="block font-heading text-base font-extrabold tracking-wide">Area 51</span>
-              <span className="block text-[0.6rem] font-bold uppercase tracking-[0.18em] text-[#7fe7db]">Admin</span>
-            </span>
-          </a>
-          <button
-            type="button"
-            onClick={onToggleCollapse}
-            aria-expanded={!collapsed}
-            aria-controls="admin-sidebar"
-            title={collapsed ? 'Expand sidebar' : 'Collapse sidebar'}
-            className="hidden h-10 w-10 shrink-0 items-center justify-center rounded-lg text-slate-200 transition-colors hover:bg-white/10 hover:text-white lg:inline-flex"
-          >
-            <svg viewBox="0 0 24 24" className={`h-5 w-5 transition-transform ${collapsed ? 'rotate-180' : ''}`} aria-hidden="true">
-              <path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-            <span className="sr-only">{collapsed ? 'Expand sidebar' : 'Collapse sidebar'}</span>
-          </button>
-        </div>
-
-        <nav className="mt-4 flex-1 space-y-1 px-3">
-          <p className={`px-3 pb-1 pt-2 text-[0.65rem] font-extrabold uppercase tracking-[0.18em] text-slate-400 ${collapsed ? 'lg:sr-only' : ''}`}>Manage</p>
-          <Link
-            href="/dashboard"
-            onClick={onClose}
-            title="Inquiries"
-            className={`flex min-h-[44px] items-center gap-3 rounded-lg bg-teal px-3 py-2 text-sm font-bold text-white ${collapsed ? 'lg:justify-center lg:px-2' : ''}`}
-          >
-            <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0" aria-hidden="true"><path d="M3 3h18v18H3zM3 9h18M9 21V9" stroke="currentColor" strokeWidth="1.8" fill="none" strokeLinecap="round" strokeLinejoin="round" /></svg>
-            <NavLabel collapsed={collapsed}>Inquiries</NavLabel>
-          </Link>
-          <a href="/" title="View website" className={`flex min-h-[44px] items-center gap-3 rounded-lg px-3 py-2 text-sm font-semibold text-slate-200 transition-colors hover:bg-white/5 hover:text-white ${collapsed ? 'lg:justify-center lg:px-2' : ''}`}>
-            <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2" stroke="currentColor" strokeWidth="1.8" fill="none" strokeLinecap="round" strokeLinejoin="round" /></svg>
-            <NavLabel collapsed={collapsed}>View website</NavLabel>
-          </a>
-        </nav>
-
-        <div className="border-t border-white/10 p-4">
-          <div className={`flex items-center gap-3 ${collapsed ? 'lg:justify-center' : ''}`}>
-            <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-[#f7b64a] text-sm font-extrabold text-[#0a1d2d]" title={user?.name}>{(user?.name || 'A').charAt(0)}</span>
-            <div className={`min-w-0 ${collapsed ? 'lg:hidden' : ''}`}>
-              <p className="truncate text-sm font-bold">{user?.name}</p>
-              <p className="truncate text-xs text-slate-300">{user?.email}</p>
-            </div>
-          </div>
-          <button
-            type="button"
-            onClick={() => router.post('/logout')}
-            title="Log out"
-            className={`mt-4 flex min-h-[44px] w-full items-center justify-center gap-2 rounded-lg border border-white/15 px-3 py-2 text-sm font-bold text-slate-200 transition-colors hover:bg-white/10 hover:text-white ${collapsed ? 'lg:px-2' : ''}`}
-          >
-            <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0" aria-hidden="true"><path d="M9 6H6a2 2 0 00-2 2v8a2 2 0 002 2h3M15 16l4-4-4-4M19 12H9" stroke="currentColor" strokeWidth="1.8" fill="none" strokeLinecap="round" strokeLinejoin="round" /></svg>
-            <NavLabel collapsed={collapsed}>Log out</NavLabel>
-          </button>
-        </div>
-      </aside>
-    </>
   )
 }
 
@@ -234,25 +156,13 @@ export default function Dashboard({
 }) {
   const { auth } = usePage().props
   const user = auth?.user
-  const [sidebarOpen, setSidebarOpen] = useState(false)
-  const [collapsed, setCollapsed] = useState(() => {
-    if (typeof window === 'undefined') return false
-    return window.localStorage.getItem(SIDEBAR_KEY) === '1'
-  })
+  const { sidebarOpen, setSidebarOpen, collapsed, toggleCollapse } = useAdminChrome()
   const [expanded, setExpanded] = useState(() => new Set())
   const [search, setSearch] = useState(filters.search || '')
 
   useEffect(() => {
     setSearch(filters.search || '')
   }, [filters.search])
-
-  const toggleCollapse = () => {
-    setCollapsed((current) => {
-      const next = !current
-      window.localStorage.setItem(SIDEBAR_KEY, next ? '1' : '0')
-      return next
-    })
-  }
 
   const toggleRow = (id) => {
     setExpanded((prev) => {
@@ -278,7 +188,7 @@ export default function Dashboard({
   return (
     <div className="flex min-h-screen bg-soft text-ink">
       <Head title="Admin Dashboard" />
-      <Sidebar
+      <AdminSidebar
         user={user}
         open={sidebarOpen}
         collapsed={collapsed}

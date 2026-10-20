@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AccountController;
 use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\CatalogController;
 use App\Http\Controllers\CourseDetailsController;
@@ -44,4 +45,8 @@ Route::post('/applications', [ApplicationController::class, 'store'])
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', DashboardController::class)->name('dashboard');
     Route::get('/dashboard/export', [DashboardController::class, 'export'])->name('dashboard.export');
+    Route::get('/dashboard/accounts', [AccountController::class, 'index'])->name('dashboard.accounts');
+    Route::post('/dashboard/accounts', [AccountController::class, 'store'])->name('dashboard.accounts.store');
+    Route::put('/dashboard/accounts/{account}', [AccountController::class, 'update'])->name('dashboard.accounts.update');
+    Route::delete('/dashboard/accounts/{account}', [AccountController::class, 'destroy'])->name('dashboard.accounts.destroy');
 });
