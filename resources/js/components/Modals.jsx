@@ -104,7 +104,7 @@ function SearchModal({ onClose }) {
           >
             <span>
               <span className="block font-semibold text-navy">{course.title}</span>
-              <span className="block text-xs text-muted">{course.category} · {course.duration}</span>
+              <span className="block text-xs text-muted">{course.duration}</span>
             </span>
             <span className="shrink-0 text-xs font-bold uppercase tracking-wider text-teal">View</span>
           </Link>

@@ -55,8 +55,7 @@ export default function CourseEnrollmentModal({ course, onClose, startAt = 'deta
         {step === 'details' && (
           <div>
             <img src={course.image || '/course-images/IMG1.jpg'} alt="Skillsoft" className="mb-5 h-9 w-auto object-contain" />
-            <p className="text-xs font-extrabold uppercase tracking-widest text-teal">{course.category || 'Aspire Journey'}</p>
-            <h2 id="course-modal-title" className="mt-2 pr-8 font-heading text-2xl font-bold text-navy">{course.title}</h2>
+            <h2 id="course-modal-title" className="pr-8 font-heading text-2xl font-bold text-navy">{course.title}</h2>
             {course.duration && <p className="mt-2 text-sm font-semibold text-muted">Duration: {course.duration}</p>}
             <p className="mt-5 leading-relaxed text-muted">{course.overview || course.desc}</p>
             <h3 className="mt-6 font-heading text-lg font-bold text-navy">Learning outcomes</h3>

@@ -10,7 +10,7 @@ export const DESIGN_INNOVATION_COURSES = [
     category: 'Design & Innovation',
     duration: '',
     detailsReady: true,
-    overview: 'Area 51 Design & Innovation microcredential.',
+    overview: 'Area 51 AI Microcredential.',
     outcomes: [],
     image: '/course-images/corporate-marketing.jpg'
   },
@@ -20,7 +20,7 @@ export const DESIGN_INNOVATION_COURSES = [
     category: 'Design & Innovation',
     duration: '',
     detailsReady: true,
-    overview: 'Area 51 Design & Innovation microcredential.',
+    overview: 'Area 51 AI Microcredential.',
     outcomes: [],
     image: '/course-images/product-marketing.jpg'
   },
@@ -30,7 +30,7 @@ export const DESIGN_INNOVATION_COURSES = [
     category: 'Design & Innovation',
     duration: '',
     detailsReady: true,
-    overview: 'Area 51 Design & Innovation microcredential.',
+    overview: 'Area 51 AI Microcredential.',
     outcomes: [],
     image: '/course-images/IMG8.jpg'
   },
@@ -40,7 +40,7 @@ export const DESIGN_INNOVATION_COURSES = [
     category: 'Design & Innovation',
     duration: '',
     detailsReady: true,
-    overview: 'Area 51 Design & Innovation microcredential.',
+    overview: 'Area 51 AI Microcredential.',
     outcomes: [],
     image: '/course-images/IMG9.jpg'
   },
@@ -50,7 +50,7 @@ export const DESIGN_INNOVATION_COURSES = [
     category: 'Design & Innovation',
     duration: '',
     detailsReady: true,
-    overview: 'Area 51 Design & Innovation microcredential.',
+    overview: 'Area 51 AI Microcredential.',
     outcomes: [],
     image: '/course-images/IMG10.jpg'
   },
@@ -60,7 +60,7 @@ export const DESIGN_INNOVATION_COURSES = [
     category: 'Design & Innovation',
     duration: '',
     detailsReady: true,
-    overview: 'Area 51 Design & Innovation microcredential.',
+    overview: 'Area 51 AI Microcredential.',
     outcomes: [],
     image: '/course-images/design-thinking.jpg'
   },
@@ -70,7 +70,7 @@ export const DESIGN_INNOVATION_COURSES = [
     category: 'Design & Innovation',
     duration: '',
     detailsReady: true,
-    overview: 'Area 51 Design & Innovation microcredential.',
+    overview: 'Area 51 AI Microcredential.',
     outcomes: [],
     image: '/course-images/IMG11.jpg'
   },
@@ -80,7 +80,7 @@ export const DESIGN_INNOVATION_COURSES = [
     category: 'Design & Innovation',
     duration: '',
     detailsReady: true,
-    overview: 'Area 51 Design & Innovation microcredential.',
+    overview: 'Area 51 AI Microcredential.',
     outcomes: [],
     image: '/course-images/IMG12.jpg'
   },
@@ -90,7 +90,7 @@ export const DESIGN_INNOVATION_COURSES = [
     category: 'Design & Innovation',
     duration: '',
     detailsReady: true,
-    overview: 'Area 51 Design & Innovation microcredential.',
+    overview: 'Area 51 AI Microcredential.',
     outcomes: [],
     image: '/course-images/IMG13.jpg'
   },
@@ -100,7 +100,7 @@ export const DESIGN_INNOVATION_COURSES = [
     category: 'Design & Innovation',
     duration: '',
     detailsReady: true,
-    overview: 'Area 51 Design & Innovation microcredential.',
+    overview: 'Area 51 AI Microcredential.',
     outcomes: [],
     image: '/course-images/customer-success.jpg'
   },
@@ -110,7 +110,7 @@ export const DESIGN_INNOVATION_COURSES = [
     category: 'Design & Innovation',
     duration: '',
     detailsReady: true,
-    overview: 'Area 51 Design & Innovation microcredential.',
+    overview: 'Area 51 AI Microcredential.',
     outcomes: [],
     image: '/course-images/business-skills.jpg'
   }

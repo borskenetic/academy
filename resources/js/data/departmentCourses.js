@@ -11,7 +11,7 @@ export const DEPARTMENT_COURSES = [
     category: 'Criminology',
     duration: '',
     detailsReady: true,
-    overview: 'Area 51 Criminology Department microcredential.',
+    overview: 'Area 51 AI Microcredential.',
     outcomes: [],
     image: '/course-images/IMG1.jpg'
   },
@@ -21,7 +21,7 @@ export const DEPARTMENT_COURSES = [
     category: 'Criminology',
     duration: '',
     detailsReady: true,
-    overview: 'Area 51 Criminology Department microcredential.',
+    overview: 'Area 51 AI Microcredential.',
     outcomes: [],
     image: '/course-images/introduction-to-cybersecurity.jpg'
   },
@@ -31,7 +31,7 @@ export const DEPARTMENT_COURSES = [
     category: 'Criminology',
     duration: '',
     detailsReady: true,
-    overview: 'Area 51 Criminology Department microcredential.',
+    overview: 'Area 51 AI Microcredential.',
     outcomes: [],
     image: '/course-images/cyber-defense-forensics.jpg'
   },
@@ -41,7 +41,7 @@ export const DEPARTMENT_COURSES = [
     category: 'Criminology',
     duration: '',
     detailsReady: true,
-    overview: 'Area 51 Criminology Department microcredential.',
+    overview: 'Area 51 AI Microcredential.',
     outcomes: [],
     image: '/course-images/offensive-securityethical-hacking.jpg'
   },
@@ -51,7 +51,7 @@ export const DEPARTMENT_COURSES = [
     category: 'Criminology',
     duration: '',
     detailsReady: true,
-    overview: 'Area 51 Criminology Department microcredential.',
+    overview: 'Area 51 AI Microcredential.',
     outcomes: [],
     image: '/course-images/IMG2.jpg'
   },
@@ -61,7 +61,7 @@ export const DEPARTMENT_COURSES = [
     category: 'Criminology',
     duration: '',
     detailsReady: true,
-    overview: 'Area 51 Criminology Department microcredential.',
+    overview: 'Area 51 AI Microcredential.',
     outcomes: [],
     image: '/course-images/IMG3.jpg'
   },
@@ -71,7 +71,7 @@ export const DEPARTMENT_COURSES = [
     category: 'Criminology',
     duration: '',
     detailsReady: true,
-    overview: 'Area 51 Criminology Department microcredential.',
+    overview: 'Area 51 AI Microcredential.',
     outcomes: [],
     image: '/course-images/ai-for-data-analytics-and-business-intelligence.jpg'
   },
@@ -83,7 +83,7 @@ export const DEPARTMENT_COURSES = [
     category: 'Nursing',
     duration: '',
     detailsReady: true,
-    overview: 'Area 51 Nursing Department microcredential.',
+    overview: 'Area 51 AI Microcredential.',
     outcomes: [],
     image: '/course-images/ai-for-project-management.jpg'
   },
@@ -93,7 +93,7 @@ export const DEPARTMENT_COURSES = [
     category: 'Nursing',
     duration: '',
     detailsReady: true,
-    overview: 'Area 51 Nursing Department microcredential.',
+    overview: 'Area 51 AI Microcredential.',
     outcomes: [],
     image: '/course-images/IMG4.jpg'
   },
@@ -103,7 +103,7 @@ export const DEPARTMENT_COURSES = [
     category: 'Nursing',
     duration: '',
     detailsReady: true,
-    overview: 'Area 51 Nursing Department microcredential.',
+    overview: 'Area 51 AI Microcredential.',
     outcomes: [],
     image: '/course-images/introduction-to-generative-ai.jpg'
   },
@@ -113,7 +113,7 @@ export const DEPARTMENT_COURSES = [
     category: 'Nursing',
     duration: '',
     detailsReady: true,
-    overview: 'Area 51 Nursing Department microcredential.',
+    overview: 'Area 51 AI Microcredential.',
     outcomes: [],
     image: '/course-images/IMG5.jpg'
   },
@@ -123,7 +123,7 @@ export const DEPARTMENT_COURSES = [
     category: 'Nursing',
     duration: '',
     detailsReady: true,
-    overview: 'Area 51 Nursing Department microcredential.',
+    overview: 'Area 51 AI Microcredential.',
     outcomes: [],
     image: '/course-images/cloud-security.jpg'
   },
@@ -133,7 +133,7 @@ export const DEPARTMENT_COURSES = [
     category: 'Nursing',
     duration: '',
     detailsReady: true,
-    overview: 'Area 51 Nursing Department microcredential.',
+    overview: 'Area 51 AI Microcredential.',
     outcomes: [],
     image: '/course-images/business-ethics.jpg'
   },
@@ -143,7 +143,7 @@ export const DEPARTMENT_COURSES = [
     category: 'Nursing',
     duration: '',
     detailsReady: true,
-    overview: 'Area 51 Nursing Department microcredential.',
+    overview: 'Area 51 AI Microcredential.',
     outcomes: [],
     image: '/course-images/IMG6.jpg'
   },
@@ -155,7 +155,7 @@ export const DEPARTMENT_COURSES = [
     category: 'Education',
     duration: '',
     detailsReady: true,
-    overview: 'Area 51 Education Department microcredential.',
+    overview: 'Area 51 AI Microcredential.',
     outcomes: [],
     image: '/course-images/design-thinking.jpg'
   },
@@ -165,7 +165,7 @@ export const DEPARTMENT_COURSES = [
     category: 'Education',
     duration: '',
     detailsReady: true,
-    overview: 'Area 51 Education Department microcredential.',
+    overview: 'Area 51 AI Microcredential.',
     outcomes: [],
     image: '/course-images/IMG7.jpg'
   },
@@ -177,7 +177,7 @@ export const DEPARTMENT_COURSES = [
     category: 'Tourism & Hospitality',
     duration: '',
     detailsReady: true,
-    overview: 'Area 51 Tourism & Hospitality Department microcredential.',
+    overview: 'Area 51 AI Microcredential.',
     outcomes: [],
     image: '/course-images/business-strategy.jpg'
   },
@@ -187,7 +187,7 @@ export const DEPARTMENT_COURSES = [
     category: 'Tourism & Hospitality',
     duration: '',
     detailsReady: true,
-    overview: 'Area 51 Tourism & Hospitality Department microcredential.',
+    overview: 'Area 51 AI Microcredential.',
     outcomes: [],
     image: '/course-images/business-operations-and-process-improvement.jpg'
   },
@@ -197,7 +197,7 @@ export const DEPARTMENT_COURSES = [
     category: 'Tourism & Hospitality',
     duration: '',
     detailsReady: true,
-    overview: 'Area 51 Tourism & Hospitality Department microcredential.',
+    overview: 'Area 51 AI Microcredential.',
     outcomes: [],
     image: '/course-images/leadership-essentials.jpg'
   },
@@ -207,7 +207,7 @@ export const DEPARTMENT_COURSES = [
     category: 'Tourism & Hospitality',
     duration: '',
     detailsReady: true,
-    overview: 'Area 51 Tourism & Hospitality Department microcredential.',
+    overview: 'Area 51 AI Microcredential.',
     outcomes: [],
     image: '/course-images/customer-servicecore-concepts-methods.jpg'
   },
@@ -217,7 +217,7 @@ export const DEPARTMENT_COURSES = [
     category: 'Tourism & Hospitality',
     duration: '',
     detailsReady: true,
-    overview: 'Area 51 Tourism & Hospitality Department microcredential.',
+    overview: 'Area 51 AI Microcredential.',
     outcomes: [],
     image: '/course-images/business-planning-and-analysis.jpg'
   }

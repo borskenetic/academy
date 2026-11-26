@@ -6,11 +6,13 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreSkillsoftLeadRequest;
 use App\Models\Application;
 use App\Models\Program;
+use App\Services\XenditPaymentService;
 use Illuminate\Http\JsonResponse;
+use Throwable;
 
 class SkillsoftLeadController extends Controller
 {
-    public function store(StoreSkillsoftLeadRequest $request): JsonResponse
+    public function store(StoreSkillsoftLeadRequest $request, XenditPaymentService $payments): JsonResponse
     {
         $data = $request->validated();
         $program = Program::findByKey($data['program_key'] ?? null);
@@ -41,10 +43,31 @@ class SkillsoftLeadController extends Controller
             'status' => 'submitted',
         ]);
 
+        $paymentUrl = null;
+
+        if ($payments->requiresPayment($application->institution_code)) {
+            try {
+                $paymentUrl = $payments->createCheckout($application);
+            } catch (Throwable $exception) {
+                report($exception);
+
+                $application->forceFill(['payment_status' => XenditPaymentService::STATUS_FAILED])->save();
+
+                return response()->json([
+                    'ok' => false,
+                    'id' => $application->id,
+                    'message' => 'Your registration was saved, but the payment page could not be opened. Please try again in a few minutes.',
+                ], 502);
+            }
+        }
+
         return response()->json([
             'ok' => true,
             'id' => $application->id,
-            'message' => 'Registration submitted. Our team will contact you soon.',
+            'message' => $paymentUrl
+                ? 'Registration saved. Redirecting to payment.'
+                : 'Registration submitted. Our team will contact you soon.',
+            'payment_url' => $paymentUrl,
         ], 201);
     }
 }

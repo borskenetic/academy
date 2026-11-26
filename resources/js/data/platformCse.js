@@ -132,7 +132,7 @@ export const CSE_CATALOG_COURSES = (() => {
       category: categoryFromTag(tag),
       duration: durationByTitle[title.toLowerCase()] || '',
       detailsReady: true,
-      overview: 'Area 51 Computer Science Engineering microcredential.',
+      overview: 'Area 51 AI Microcredential.',
       outcomes: [],
       image: image || '/course-images/IMG1.jpg'
     })
@@ -150,7 +150,7 @@ export const CSE_CATALOG_COURSES = (() => {
       category: 'Development',
       duration: duration || '',
       detailsReady: true,
-      overview: 'Area 51 Computer Science Engineering microcredential.',
+      overview: 'Area 51 AI Microcredential.',
       outcomes: [],
       image: `/course-images/IMG${(byTitle.size % 24) + 1}.jpg`
     })

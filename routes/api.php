@@ -3,11 +3,15 @@
 use App\Http\Controllers\Api\InstitutionAccountController;
 use App\Http\Controllers\Api\InstitutionInquiryController;
 use App\Http\Controllers\Api\SkillsoftLeadController;
+use App\Http\Controllers\Api\XenditWebhookController;
 use Illuminate\Support\Facades\Route;
 
 Route::post('/skillsoft-leads', [SkillsoftLeadController::class, 'store'])
     ->middleware('throttle:10,1')
     ->name('api.skillsoft-leads.store');
+
+Route::post('/xendit/webhook', [XenditWebhookController::class, 'handle'])
+    ->name('api.xendit.webhook');
 
 Route::post('/institution/login', [InstitutionInquiryController::class, 'login'])
     ->middleware('throttle:5,1')

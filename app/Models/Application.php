@@ -33,7 +33,23 @@ class Application extends Model
         'source_page',
         'source_origin',
         'status',
+        'payment_status',
+        'payment_amount',
+        'payment_currency',
+        'payment_reference',
+        'xendit_session_id',
+        'xendit_payment_id',
+        'payment_url',
+        'paid_at',
     ];
+
+    protected function casts(): array
+    {
+        return [
+            'payment_amount' => 'decimal:2',
+            'paid_at' => 'datetime',
+        ];
+    }
 
     public function user(): BelongsTo
     {

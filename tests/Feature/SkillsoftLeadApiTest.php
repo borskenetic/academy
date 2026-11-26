@@ -12,6 +12,14 @@ class SkillsoftLeadApiTest extends TestCase
 {
     use RefreshDatabase;
 
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        // These tests cover lead storage only. Paid-institution checkout is tested in XenditPaymentTest.
+        config(['payments.institutions' => []]);
+    }
+
     private function validLead(array $overrides = []): array
     {
         return array_merge([

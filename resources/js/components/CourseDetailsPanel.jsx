@@ -14,7 +14,7 @@ export default function CourseDetailsPanel({ course, onClose }) {
         <div>
           <p className="text-xs font-extrabold uppercase tracking-widest text-teal">Course details</p>
           <h3 id="selected-course-title" className="mt-2 font-heading text-2xl font-bold text-navy">{course.title}</h3>
-          <p className="mt-2 text-sm font-semibold text-muted">{course.category}{course.duration ? ` · ${course.duration}` : ''}</p>
+          {course.duration ? <p className="mt-2 text-sm font-semibold text-muted">{course.duration}</p> : null}
         </div>
         <button type="button" onClick={onClose} className="self-start rounded-lg border border-line bg-white px-3 py-2 text-sm font-bold text-muted hover:border-teal hover:text-teal">Close details</button>
       </div>

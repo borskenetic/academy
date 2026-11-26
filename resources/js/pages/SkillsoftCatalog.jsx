@@ -23,7 +23,6 @@ function ChipButton({ label, active, onClick }) {
 
 function CourseCard({ course }) {
   const detailPath = courseDetailPath(course)
-  const tags = (course.categories?.length ? course.categories : [course.category]).filter(Boolean)
 
   return (
     <Link
@@ -40,16 +39,6 @@ function CourseCard({ course }) {
         />
       </div>
       <div className="flex flex-1 flex-col gap-2 p-4">
-        <div className="flex flex-wrap gap-1.5">
-          {tags.map((tag) => (
-            <span
-              key={tag}
-              className="inline-flex w-fit max-w-full items-center rounded-full bg-teal/10 px-2.5 py-0.5 text-[0.65rem] font-extrabold uppercase tracking-[0.12em] text-teal"
-            >
-              <span className="truncate">{tag}</span>
-            </span>
-          ))}
-        </div>
         <h3 className="font-heading text-lg font-bold leading-snug text-navy line-clamp-2">{course.title}</h3>
         {course.duration ? <p className="text-sm text-muted">{course.duration}</p> : null}
         <p className="line-clamp-2 text-sm leading-relaxed text-muted">{course.overview}</p>
@@ -176,7 +165,7 @@ export default function SkillsoftCatalogPage({ cat = 'All' }) {
             </label>
 
             <div className="mt-3 space-y-2.5">
-              <div className="hidden w-full flex-wrap gap-2 lg:flex" role="group" aria-label="Filter courses by category">
+              <div className="flex w-full flex-wrap gap-2" role="group" aria-label="Filter courses by category">
                 {['All', ...CATEGORIES].map((group) => (
                   <ChipButton key={group} label={group} active={activeCat === group} onClick={() => setCat(group)} />
                 ))}

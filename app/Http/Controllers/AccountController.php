@@ -28,6 +28,7 @@ class AccountController extends Controller
         'sec' => 'SEC',
         'siit' => 'SIIT',
         'sjit' => 'SJIT',
+        'tup' => 'TUP',
         'unep' => 'UNEP',
         'zppsu' => 'ZPPSU',
     ];

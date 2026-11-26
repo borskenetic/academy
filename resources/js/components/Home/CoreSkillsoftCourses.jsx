@@ -1,14 +1,13 @@
 import { useState } from 'react'
 import { Link } from '@inertiajs/react'
 import { CORE_COURSES } from '../../data/currentCatalog'
-import { assignProgramGroup } from '../../data/courseGroups'
 
 export default function CoreSkillsoftCourses() {
   const [visible, setVisible] = useState(8)
   const [query, setQuery] = useState('')
   const terms = query.trim().toLowerCase().split(/\s+/).filter(Boolean)
   const filtered = CORE_COURSES.filter((course) => {
-    const text = [course.title, assignProgramGroup(course), course.overview, ...(course.outcomes || [])].join(' ').toLowerCase()
+    const text = [course.title, course.overview, ...(course.outcomes || [])].join(' ').toLowerCase()
     return terms.every((term) => text.includes(term))
   })
   const shown = filtered.slice(0, visible)
@@ -32,8 +31,7 @@ export default function CoreSkillsoftCourses() {
                 <img src={course.image} alt={`${course.title} course illustration`} loading="lazy" className="h-full w-full object-cover transition-transform group-hover:scale-105" />
               </div>
               <div className="flex flex-1 flex-col p-4">
-                <span className="w-fit rounded-full bg-teal/[0.08] px-2.5 py-1 text-[0.68rem] font-bold uppercase tracking-wider text-teal">{assignProgramGroup(course)}</span>
-                <h3 className="mt-3 font-heading text-sm font-bold leading-snug text-navy sm:text-base">{course.title}</h3>
+                <h3 className="font-heading text-sm font-bold leading-snug text-navy sm:text-base">{course.title}</h3>
                 <span className="mt-auto pt-4 text-sm font-bold text-teal">View description →</span>
               </div>
             </Link>
